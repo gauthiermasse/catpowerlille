@@ -17,6 +17,7 @@
 //= require popper.min.js
 //= require bootstrap.min.js
 //= require slidebar.js
+//= require classie.js
 //= require bootstrap-growl.min.js
 //= require scrollpos-styler.js
 //= require adaptive-backgrounds.js
