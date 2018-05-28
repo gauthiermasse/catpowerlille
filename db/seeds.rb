@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+require 'faker'
+
+20.times do
+	Item.create(
+		title: Faker::Cat.name,
+		description: Faker::Cat.breed,
+		price: Faker::Number.decimal(2),
+		url: "https://wamiz.com/uploads/images/chatdrolepositioncarre.jpg"
+	)
+end
