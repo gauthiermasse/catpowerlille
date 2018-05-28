@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def contact
   end
+
+  def panier
+  end
 end
