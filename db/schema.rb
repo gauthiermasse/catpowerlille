@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_114007) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_carts_on_user_id"
+    t.index ["user_id"], name: "index_carts_on_user_id", unique: true
   end
 
   create_table "carts_items", id: false, force: :cascade do |t|
@@ -24,15 +24,6 @@ ActiveRecord::Schema.define(version: 2018_05_29_114007) do
     t.integer "item_id", null: false
     t.index ["cart_id", "item_id"], name: "index_carts_items_on_cart_id_and_item_id"
     t.index ["item_id", "cart_id"], name: "index_carts_items_on_item_id_and_cart_id"
-  end
-
-  create_table "items", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.float "price"
-    t.string "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "items_orders", id: false, force: :cascade do |t|
