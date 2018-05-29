@@ -1,0 +1,215 @@
+<section class="slice-xl page-title border-bottom has-bg-cover bg-size-cover" style="background-image: url(<%= asset_path 'cat/pexels-photo-347290.jpg' %>);">
+    <div class="container mask-container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="">
+                    <h3 class="heading heading-1 strong-600 text-capitalize mb-1">
+                        <span>Mon panier</span>
+                    </h3>
+
+                    <ol class="breadcrumb breadcrumb--style-2">
+                        <li class="breadcrumb-item"><a href="<%= root_path %>">Accueil</a></li>
+                        <li class="breadcrumb-item"<a href="#">Retour </a></li>
+                        <li class="breadcrumb-item"><a href="#">???????</a></li>
+                    </ol>
+                </div>
+
+                <!-- Fluid text paragraph -->
+                <div class="pb-4 mt-4">
+                    <p class="lead">
+                        Parce qu'un chat peut égayer votre vie
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slice sct-color-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 mt--150">
+                <form class="form-default" data-toggle="validator" role="form">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table-cart">
+                                <thead>
+                                    <tr>
+                                        <th class="product-image">Aperçu</th>
+                                        <th class="product-name">Description</th>
+                                        <th class="product-price d-none d-lg-table-cell">Prix</th>
+                                        <th class="product-quanity d-none d-md-table-cell">Quantité</th>
+                                        <th class="product-total">Total</th>
+                                        <th class="product-remove"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="cart-item">
+                                        <td class="product-image">
+                                            <a href="#">
+                                                <img src="<%= asset_path 'cat/cat-cute-figurine-36451.jpg' %>">
+                                            </a>
+                                        </td>
+
+                                        <td class="product-name">
+                                            Nike running shoes - Pink
+                                        </td>
+
+                                        <td class="product-price d-none d-lg-table-cell">
+                                            $120 USD
+                                        </td>
+
+                                        <td class="product-quantity d-none d-md-table-cell">
+                                            <div class="input-group input-group--style-2 pr-4" style="width: 130px;">
+                                                <input type="text" name="quantity[1]" class="form-control input-number" placeholder="3" value="1" min="1" max="10">
+                                            </div>
+                                        </td>
+                                        <td class="product-total">
+                                            <span>$120.00 USD</span>
+                                        </td>
+                                        <td class="product-remove">
+                                            <a href="#" class="text-right pl-4">
+                                                <i class="fa fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Cart item -->
+                                    <tr class="cart-item">
+                                        <td class="product-image">
+                                            <a href="#">
+                                                <img src="<%= asset_path 'cat/animal-animal-photography-cat-115011.jpg' %>">
+                                            </a>
+                                        </td>
+
+                                        <td class="product-name">
+                                            Man short sleeve shirt - Pink
+                                        </td>
+
+                                        <td class="product-price d-none d-lg-table-cell">
+                                            $45 USD
+                                        </td>
+
+                                        <td class="product-quantity d-none d-md-table-cell">
+                                            <div class="input-group input-group--style-2 pr-4" style="width: 130px;">
+                                                <input type="text" name="quantity[2]" class="form-control input-number" placeholder="3" value="2" min="1" max="10">
+                                            </div>
+                                        </td>
+                                        <td class="product-total">
+                                            <span>$90.00 USD</span>
+                                        </td>
+                                        <td class="product-remove">
+                                            <a href="#" class="text-right pl-4">
+                                                <i class="fa fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Cart item -->
+                                    <tr class="cart-item">
+                                        <td class="product-image">
+                                            <a href="#">
+                                                <img src="<%= asset_path 'cat/adorable-animal-bed-596590.jpg' %>">
+                                            </a>
+                                        </td>
+
+                                        <td class="product-name">
+                                            Man running shoes- Black
+                                        </td>
+
+
+                                        <td class="product-price d-none d-lg-table-cell">
+                                            $160 USD
+                                        </td>
+
+                                        <td class="product-quantity d-none d-md-table-cell">
+                                            <div class="input-group input-group--style-2 pr-4" 
+                                            <input type="text" name="quantity[3]" class="form-control input-number" placeholder="3" value="1" min="1" max="10">
+                                        </div>
+                                    </td>
+                                    <td class="product-total">
+                                        <span>$160.00 USD</span>
+                                    </td>
+                                    <td class="product-remove">
+                                        <a href="#" class="text-right pl-4">
+                                                <i class="fa fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <!-- Cart item -->
+                                <tr class="cart-item">
+                                    <td class="product-image">
+                                        <a href="#">
+                                            <img src="<%= asset_path 'cat/adorable-animal-animal-photography-171227.jpg' %>">
+                                        </a>
+                                    </td>
+
+                                    <td class="product-name">
+                                        Ocean blue fitness shirt
+                                    </td>
+
+
+                                    <td class="product-price d-none d-lg-table-cell">
+                                        $30 USD
+                                    </td>
+
+                                    <td class="product-quantity d-none d-md-table-cell">
+                                        <div class="input-group input-group--style-2 pr-4" style="width: 130px;">
+                                            <input type="text" name="quantity[4]" class="form-control input-number" placeholder="3" value="4" min="1" max="10">
+                                        </div>
+                                    </td>
+                                    <td class="product-total">
+                                        <span>$120.00 USD</span>
+                                    </td>
+                                    <td class="product-remove">
+                                        <a href="#" class="text-right pl-4">
+                                                <i class="fa fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row align-items-center pt-5">
+                    <div class="col-6">
+                        <a href="#" class="link link--style-3">
+                            <i class="ion-android-arrow-back"></i>
+                            Retour au magasin
+                        </a>
+                    </div>
+                    <div class="col-6 text-right">
+                        <button type="submit" class="btn btn-styled btn-base-1">Passer au paiement</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+<section class="slice-xl sct-color-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="text-center">
+                    <div class="d-block font-size-3 font-size-md-6 c-gray-light">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+
+                    <h2 class="heading heading-3 strong-600">Votre panier est vide.</h2>
+                    <p class="mt-4 px-5">
+                        Votre panier est pour l'instant vide. Retournez vers notre magasin pour profiter des derniéres photos que nous avons selectionnés pour vous.
+                    </p>
+                    <a href="#" class="btn btn-styled btn-base-1 mt-5">
+                        Retourner dans la galerie
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

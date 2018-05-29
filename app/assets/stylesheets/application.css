@@ -12,4 +12,21 @@
  *
  *= require_tree .
  *= require_self
+ *= require boomerang.min.css
+ *= require swiper.min.css
+ *= require hamburgers.min.css
+ *= require animate.min.css
+ *= require jquery.fancybox.min.css
+ *= require font-awesome.min.css
+ *= require ionicons.min.css
+ *= require line-icons.css
+ *= require line-icons-pro.css
+ *= require linea-icons-arrows.css
+ *= require linea-icons-basic.css
+ *= require linea-icons-ecommerce.css
+ *= require linea-icons-software.css
+ *= require custom-style.css
+ *= require settings.css
+ *= require navigation.css
+ *= require bootstrap.min.css
  */
