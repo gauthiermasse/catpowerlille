@@ -1,1074 +1,869 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="robots" content="index, follow">
-<meta name="description" content="Boomerang is a responsive website template based on the well known Bootstrap framework. It's very well structured with lots of features and demos ready to be used.">
-<meta name="keywords" content="bootstrap, responsive, template, website, html, theme, ux, ui, web, design, developer, support, business, corporate, real estate, education, medical, school, education, demo, css, framework">
-<meta name="author" content="Webpixels">
-
-<title>Catpower Lille</title>
-<!-- <link href="../../assets/images/favicon.png" rel="icon" type="image/png"> l'image du favicon est à mettre dans le dossier stylesheets -->
-
-</head>
-<body>
-
-
 <!-- MAIN WRAPPER -->
 <div class="body-wrap shop-default shop-minimalist">
-    <div id="st-container" class="st-container">
+  <div id="st-container" class="st-container">
 
-        <nav class="st-menu st-effect-1" id="menu-1">
-    <div class="st-profile">
-        <div class="st-profile-user-wrapper">
-            <div class="profile-user-image">
-                <img src="<%= image_path '/prv/people/person-1.jpg' %>">
-               
-            </div>
-            <div class="profile-user-info">
-                <span class="profile-user-name">Bertram Ozzie</span>
-                <span class="profile-user-email">username@example.com</span>
-            </div>
-        </div>
-    </div>
+    <div class="st-pusher">
+      <div class="st-content">
+        <div class="st-content-inner">
+          <!-- Header -->
+          <div class="header">
+            <!-- Top Bar -->
 
-    <div class="st-menu-list mt-2">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-bookmarks-outline"></i> Theme documentation
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-cart-outline"></i> Purchase Tribus
-                </a>
-            </li>
-        </ul>
-    </div>
+            <!-- Global Search -->
+            <section id="sctGlobalSearch" class="global-search global-search-overlay">
+              <div class="container">
+                <div class="global-search-backdrop mask-dark--style-2"></div>
 
-    <h3 class="st-menu-title">Compte</h3>
-    <div class="st-menu-list">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-person-outline"></i> Profil
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-location-outline"></i> Mes adresses
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-card"></i> Mes cartes
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-unlocked-outline"></i> Gestion mot de passe
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <h3 class="st-menu-title">Support technique</h3>
-    <div class="st-menu-list">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-information-outline"></i> About Tribus
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-email-outline"></i> Contact &amp; support
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-camera"></i> Commencer
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-        <div class="st-pusher">
-            <div class="st-content">
-                <div class="st-content-inner">
-                    <!-- Header -->
-                    <div class="header">
-    <!-- Top Bar -->
-    
-    <!-- Global Search -->
-    <section id="sctGlobalSearch" class="global-search global-search-overlay">
-    <div class="container">
-        <div class="global-search-backdrop mask-dark--style-2"></div>
-
-        <!-- Search form -->
-        <form class="form-horizontal form-global-search z-depth-2-top" role="form">
-            <div class="px-4">
-                <div class="row">
-                    <div class="col-12">
+                <!-- Search form -->
+                <form class="form-horizontal form-global-search z-depth-2-top" role="form">
+                  <div class="px-4">
+                    <div class="row">
+                      <div class="col-12">
                         <input type="text" class="search-input" placeholder="Type and hit enter ...">
+                      </div>
                     </div>
-                </div>
-            </div>
-            <a href="#" class="close-search" data-toggle="global-search" title="Close search bar"></a>
-        </form>
-    </div>
-</section>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar--bold navbar--style-2 navbar-light bg-default  navbar--bb-1px">
-        <div class="container navbar-container">
-            <!-- Brand/Logo -->
-                        <a class="navbar-brand" href="../../index.html">
-                            <img src="<%= image_path 'logo/logo-2-b.png' %>">
-            
-                            </a>
-            
-            <div class="d-inline-block">
-                <!-- Navbar toggler  -->
-                <button class="navbar-toggler hamburger hamburger-js hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbar_main">
-    <!-- Navbar search - For small resolutions -->
-    <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
-        <form class="" role="form">
-            <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                <button class="btn btn-base-3" type="button">Go!</button>
-                </span>
-            </div>
-        </form>
-    </div>
-
-
-<div class=" d-none d-lg-inline-block d-xl-inline-block">
-    <ul class="navbar-nav ml-auto" data-hover="dropdown">
-        <!-- Search button -->
-        <li class="nav-item nav-item-icon hidden-md-down" data-toggle="global-search">
-            <a href="#" class="nav-link">
-                <span>
-                    <i class="fa fa-search"></i>
-                </span>
-            </a>
-        </li>
-
-        <!-- Login -->
-        <li class="nav-item nav-item-icon">
-            <a href="#" class="nav-link hidden-md-down" data-toggle="dropdown">
-                <i class="fa fa-user"></i>
-            </a>
-
-            <ul class="dropdown-menu dropdown-menu--right dropdown-form">
-    <li>
-        <div class="dropdown-form-inner">
-            <div class="row align-items-center b-xs-bottom">
-                <div class="col-7">
-                    <h3 class="heading heading-5 strong-400 text-capitalize pb-2">Se connecter</h3>
-                </div>
-                <div class="col-5">
-                    <a href="#" class="btn-close-dropdown" data-toggle="dropdown">&times;</a>
-                </div>
-            </div>
-
-            <div class="py-4">
-                <form class="form-default">
-                    <div class="form-group">
-                        <input type="email" class="form-control form-control-lg" placeholder="Email">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="password" class="form-control form-control-lg" placeholder="Password">
-                    </div>
-
-                    <div class="form-group mb-0">
-                        <div class=" row align-items-center">
-                            <div class="col-6">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="chkRememberMe">
-                                    <label for="chkRememberMe" class="no-margin">Se souvenir</label>
-                                </div>
-                            </div>
-
-                            <div class="col-6 text-right">
-                                <button type="submit" class="btn btn-base-1 btn-circle">Se connecter</button>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
+                  <a href="#" class="close-search" data-toggle="global-search" title="Close search bar"></a>
                 </form>
-            </div>
-        </div>
-    </li>
+              </div>
+            </section>
 
-    <li class="text-center py-3 b-xs-top">
-        <a href="sign-up-1.html">
-            Créer un nouveau compte
-        </a>
-    </li>
-</ul>
-        </li>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar--bold navbar--style-2 navbar-light bg-default  navbar--bb-1px">
+              <div class="container navbar-container">
+                <!-- Brand/Logo -->
+                <a class="navbar-brand" href="../../index.html">
+                  <img src="<%= image_path 'logo/logo-2-b.png' %>">
 
-        <!-- Cart -->
-        <li class="nav-item nav-item-icon dropdown">
-            <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-shopping-bag"></i>
-                
-            </a>
-
-            <ul class="dropdown-menu dropdown-menu--right px-0">
-                <li>
-                    <div class="dropdown-cart px-0">
-    <div class="dc-header">
-        <h3 class="heading heading-6 strong-600">Panier</h3>
-    </div>
-    <div class="dc-item">
-        <div class="d-flex align-items-center">
-            <div class="dc-image">
-                <a href="#">
-                    
-                   
                 </a>
-            </div>
-            <div class="dc-content">
-                <span class="d-block dc-product-name text-capitalize strong-600 mb-1">
-                    <a href="#">
-                        Wood phone case
-                    </a>
-                </span>
 
-                <span class="dc-quantity">x2</span>
-                <span class="dc-price">$50.00</span>
-            </div>
-            <div class="dc-actions">
-                <button>
-                    <i class="ion-close"></i>
-                </button>
-            </div>
-        </div>
-    </div>
+                <div class="d-inline-block">
+                  <!-- Navbar toggler  -->
+                  <button class="navbar-toggler hamburger hamburger-js hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
+                </div>
 
-    <div class="dc-item">
-        <div class="d-flex align-items-center">
-            <div class="dc-image">
-                <a href="#">
-                    <img src="../../assets/images/prv/shop/accessories/img-2a.png" class="img-fluid" alt="">
-                </a>
-            </div>
-            <div class="dc-content">
-                <span class="d-block dc-product-name text-capitalize strong-600 mb-1">
-                    <a href="#">
-                        Leather bag
-                    </a>
-                </span>
+                <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbar_main">
+                  <!-- Navbar search - For small resolutions -->
+                  <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
+                    <form class="" role="form">
+                      <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                          <button class="btn btn-base-3" type="button">Go!</button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
 
-                <span class="dc-quantity">x1</span>
-                <span class="dc-price">$250.00</span>
-            </div>
-            <div class="dc-actions">
-                <button>
-                    <i class="ion-close"></i>
-                </button>
-            </div>
-        </div>
-    </div>
 
-    <div class="dc-item">
-        <div class="d-flex align-items-center">
-            <div class="dc-image">
-                <a href="#">
-                    <img src="../../assets/images/prv/shop/accessories/img-3a.png" class="img-fluid" alt="">
-                </a>
-            </div>
-            <div class="dc-content">
-                <span class="d-block dc-product-name text-capitalize strong-600 mb-1">
-                    <a href="#">
-                        Brown leather wallet
-                    </a>
-                </span>
+                  <div class=" d-none d-lg-inline-block d-xl-inline-block">
+                    <ul class="navbar-nav ml-auto" data-hover="dropdown">
+                      <!-- Search button -->
+                      <li class="nav-item nav-item-icon hidden-md-down" data-toggle="global-search">
+                        <a href="#" class="nav-link">
+                          <span>
+                            <i class="fa fa-search"></i>
+                          </span>
+                        </a>
+                      </li>
 
-                <span class="dc-quantity">x1</span>
-                <span class="dc-price">$99.00</span>
-            </div>
-            <div class="dc-actions">
-                <button>
-                    <i class="ion-close"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="dc-item py-4">
-        <span class="subtotal-text">Total</span>
-        <span class="subtotal-amount">$450.00</span>
-    </div>
-    <div class="py-4 text-center">
-        <ul class="inline-links inline-links--style-3">
-            <li class="pr-3">
-                <a href="#" class="link link--style-2 text-capitalize">
-                    <i class="ion-person"></i> Mon compte
-                </a>
-            </li>
-            <li class="pr-3">
-                <a href="#" class="link link--style-1 text-capitalize">
-                    <i class="ion-bag"></i> Voir panier
-                </a>
-            </li>
-            <li>
-                <a href="#" class="link link--style-1 text-capitalize">
-                    <i class="ion-forward"></i> Deconnexion
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-                </li>
-            </ul>
-        </li>
+                      <!-- Login -->
+                      <li class="nav-item nav-item-icon">
+                        <a href="#" class="nav-link hidden-md-down" data-toggle="dropdown">
+                          <i class="fa fa-user"></i>
+                        </a>
 
-        <!-- Slidebar -->
-         
-        </li>
-            </ul>
-</div>
+                        <ul class="dropdown-menu dropdown-menu--right dropdown-form">
+                          <li>
+                            <div class="dropdown-form-inner">
+                              <div class="row align-items-center b-xs-bottom">
+                                <div class="col-7">
+                                  <h3 class="heading heading-5 strong-400 text-capitalize pb-2">Se connecter</h3>
+                                </div>
+                                <div class="col-5">
+                                  <a href="#" class="btn-close-dropdown" data-toggle="dropdown">&times;</a>
+                                </div>
+                              </div>
 
-        </div>
-    </nav>
-</div>
+                              <div class="py-4">
+                                <form class="form-default">
+                                  <div class="form-group">
+                                    <input type="email" class="form-control form-control-lg" placeholder="Email">
+                                  </div>
 
-                    <!-- Slider -->
-                    <div id="rev_slider_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="image-hero39" data-source="gallery">
-<!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
-    <div id="rev_slider_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
-        <ul>
-            <li data-index="rs-1" data-transition="slidevertical" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="../../assets/images/revolution/concept-1-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                  <div class="form-group">
+                                    <input type="password" class="form-control form-control-lg" placeholder="Password">
+                                  </div>
 
-                <div class="tp-caption tp-shape tp-shapewrapper bg-minimalist" id="slide-1-layer-0"
-                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                    data-width="full"
-                    data-height="full"
-                    data-whitespace="nowrap"
-                    data-type="shape"
-                    data-basealign="slide"
-                    data-responsive_offset="on"
-                    data-responsive="off"
-                    data-frames='[{"from":"opacity:0;","speed":1500,"to":"o:1;","delay":750,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"ease":"nothing"}]'
-                    data-textAlign="['left','left','left','left']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style="z-index: 5; text-transform: left;">
+                                  <div class="form-group mb-0">
+                                    <div class=" row align-items-center">
+                                      <div class="col-6">
+                                        <div class="checkbox">
+                                          <input type="checkbox" id="chkRememberMe">
+                                          <label for="chkRememberMe" class="no-margin">Se souvenir</label>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-6 text-right">
+                                        <button type="submit" class="btn btn-base-1 btn-circle">Se connecter</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="text-center py-3 b-xs-top">
+                            <a href="sign-up-1.html">
+                              Créer un nouveau compte
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- Cart -->
+                      <li class="nav-item nav-item-icon">
+                        <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-shopping-bag"></i>
+                        </a>
+                      </li>
+
+                      <!-- Slidebar -->
+
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </nav>
+          </div>
+
+          <!-- Slider -->
+          <div id="rev_slider_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="image-hero39" data-source="gallery">
+            <!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
+            <div id="rev_slider_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+              <ul>
+                <li data-index="rs-1" data-transition="slidevertical" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="../../assets/images/revolution/concept-1-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+
+                  <div class="tp-caption tp-shape tp-shapewrapper bg-minimalist" id="slide-1-layer-0"
+                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                  data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                  data-width="full"
+                  data-height="full"
+                  data-whitespace="nowrap"
+                  data-type="shape"
+                  data-basealign="slide"
+                  data-responsive_offset="on"
+                  data-responsive="off"
+                  data-frames='[{"from":"opacity:0;","speed":1500,"to":"o:1;","delay":750,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"ease":"nothing"}]'
+                  data-textAlign="['left','left','left','left']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,0,0]"
+                  style="z-index: 5; text-transform: left;">
                 </div>
 
                 <div class="tp-caption title--style-1 tp-resizeme" id="slide-2-layer-2"
-                    data-x="['right','right','right','right']" data-hoffset="['30','30','0','0']"
-                    data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']"
-                    data-fontsize="['70','70','70','40']"
-                    data-lineheight="['70','70','70','40']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="image"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                    data-textAlign="['left','left','left','left']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style="z-index: 9;text-transform:left;border-width:0px;">
+                data-x="['right','right','right','right']" data-hoffset="['30','30','0','0']"
+                data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']"
+                data-fontsize="['70','70','70','40']"
+                data-lineheight="['70','70','70','40']"
+                data-width="none"
+                data-height="none"
+                data-whitespace="nowrap"
+                data-type="text"
+                data-width="none"
+                data-height="none"
+                data-whitespace="nowrap"
+                data-type="image"
+                data-responsive_offset="on"
+                data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+                data-textAlign="['left','left','left','left']"
+                data-paddingtop="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                style="z-index: 9;text-transform:left;border-width:0px;">
 
-                    <img src="<%= image_path 'cat/adorable-animal-animal-photography-259803.png' %>" alt="" data-ww="['650px','450px','450px','450px']" data-hh="['none','none','none','none']" data-no-retina>
-                </div>
+                <img src="<%= image_path 'cat/adorable-animal-animal-photography-259803.png' %>" alt="" data-ww="['650px','450px','450px','450px']" data-hh="['none','none','none','none']" data-no-retina>
+              </div>
 
-                <div class="tp-caption subtitle--style-1 tp-resizeme" id="slide-1-layer-1"
-                    data-x="['center','center','left','left']" data-hoffset="['-300','-300','30','30']"
-                    data-y="['middle','middle','middle','middle']" data-voffset="['-45','-45','-45','-45']"
-                    data-fontsize="['18','18','18','18']"
-                    data-lineheight="['18','18','18','18']"
-                    data-width="[400, 400, none, none]"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                    data-textAlign="['center','center','left','left']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style="z-index: 11; white-space: nowrap;text-transform:left;">
+              <div class="tp-caption subtitle--style-1 tp-resizeme" id="slide-1-layer-1"
+              data-x="['center','center','left','left']" data-hoffset="['-300','-300','30','30']"
+              data-y="['middle','middle','middle','middle']" data-voffset="['-45','-45','-45','-45']"
+              data-fontsize="['18','18','18','18']"
+              data-lineheight="['18','18','18','18']"
+              data-width="[400, 400, none, none]"
+              data-height="none"
+              data-whitespace="nowrap"
+              data-type="text"
+              data-responsive_offset="on"
+              data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+              data-textAlign="['center','center','left','left']"
+              data-paddingtop="[0,0,0,0]"
+              data-paddingright="[0,0,0,0]"
+              data-paddingbottom="[0,0,0,0]"
+              data-paddingleft="[0,0,0,0]"
+              style="z-index: 11; white-space: nowrap;text-transform:left;">
 
-                    <span class="c-gray-light">Nouvelles affiches</span>
+              <span class="c-gray-light">Nouvelles affiches</span>
 
-                </div>
+            </div>
 
-                <div class="tp-caption title--style-1 c-gray-dark tp-resizeme" id="slide-1-layer-2"
-                    data-x="['center','center','left','left']" data-hoffset="['-300','-300','30','30']"
-                    data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                    data-fontsize="['40','40','40','40']"
-                    data-lineheight="['40','40','40','40']"
-                    data-width="[400, 400, none, none]"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                    data-textAlign="['center','center','left','left']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style="z-index: 11; white-space: nowrap;text-transform:left;">
+            <div class="tp-caption title--style-1 c-gray-dark tp-resizeme" id="slide-1-layer-2"
+            data-x="['center','center','left','left']" data-hoffset="['-300','-300','30','30']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+            data-fontsize="['40','40','40','40']"
+            data-lineheight="['40','40','40','40']"
+            data-width="[400, 400, none, none]"
+            data-height="none"
+            data-whitespace="nowrap"
+            data-type="text"
+            data-responsive_offset="on"
+            data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+            data-textAlign="['center','center','left','left']"
+            data-paddingtop="[0,0,0,0]"
+            data-paddingright="[0,0,0,0]"
+            data-paddingbottom="[0,0,0,0]"
+            data-paddingleft="[0,0,0,0]"
+            style="z-index: 11; white-space: nowrap;text-transform:left;">
 
-                    <span class="strong-600">Yeux perçants</span>
+            <span class="strong-600">Yeux perçants</span>
 
-                </div>
+          </div>
 
-                <div class="tp-caption subtitle--style-1 tp-resizeme" id="slide-1-layer-3"
-                    data-x="['center','center','left','left']" data-hoffset="['-300','-300','30','30']"
-                    data-y="['middle','middle','middle','middle']" data-voffset="['45','45','45','45']"
-                    data-fontsize="['15','15','15','13']"
-                    data-width="[400, 400, none, none]"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1250,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                    data-textAlign="['center','center','left','left']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style="z-index: 12; white-space: nowrap; text-transform:left; letter-spacing:2px; font-weight:500;">
+          <div class="tp-caption subtitle--style-1 tp-resizeme" id="slide-1-layer-3"
+          data-x="['center','center','left','left']" data-hoffset="['-300','-300','30','30']"
+          data-y="['middle','middle','middle','middle']" data-voffset="['45','45','45','45']"
+          data-fontsize="['15','15','15','13']"
+          data-width="[400, 400, none, none]"
+          data-height="none"
+          data-whitespace="nowrap"
+          data-type="text"
+          data-responsive_offset="on"
+          data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1250,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+          data-textAlign="['center','center','left','left']"
+          data-paddingtop="[0,0,0,0]"
+          data-paddingright="[0,0,0,0]"
+          data-paddingbottom="[0,0,0,0]"
+          data-paddingleft="[0,0,0,0]"
+          style="z-index: 12; white-space: nowrap; text-transform:left; letter-spacing:2px; font-weight:500;">
 
-                    <span class="">Affiches / Posters / Imprimés / Et plus</span>
+          <span class="">Affiches / Posters / Imprimés / Et plus</span>
 
-                </div>
+        </div>
 
-                <div class="tp-caption" id="slide-1-layer-4"
-                    data-x="['center','center','left','left']" data-hoffset="['-300', '-300','30','30']"
-                    data-y="['middle','middle','middle','middle']" data-voffset="['150','150','120','120']"
-                    data-width="[400, 400, none, none]"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="button"
-                    data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-2939","delay":""}]'
-                    data-responsive_offset="on"
-                    data-responsive="off"
-                    data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1750,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                    data-textAlign="['center','center','left','left']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style="z-index: 11; white-space: nowrap;text-transform:left;">
+        <div class="tp-caption" id="slide-1-layer-4"
+        data-x="['center','center','left','left']" data-hoffset="['-300', '-300','30','30']"
+        data-y="['middle','middle','middle','middle']" data-voffset="['150','150','120','120']"
+        data-width="[400, 400, none, none]"
+        data-height="none"
+        data-whitespace="nowrap"
+        data-type="button"
+        data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-2939","delay":""}]'
+        data-responsive_offset="on"
+        data-responsive="off"
+        data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1750,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+        data-textAlign="['center','center','left','left']"
+        data-paddingtop="[0,0,0,0]"
+        data-paddingright="[0,0,0,0]"
+        data-paddingbottom="[0,0,0,0]"
+        data-paddingleft="[0,0,0,0]"
+        style="z-index: 11; white-space: nowrap;text-transform:left;">
 
-                    <a href="#" class="btn btn-styled btn-gray-dark btn-outline">Acheter maintenant</a>
-                </div>
-            </li>
-        </ul>
-        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
-    </div>
+        <a href="#" class="btn btn-styled btn-gray-dark btn-outline">Acheter maintenant</a>
+      </div>
+    </li>
+  </ul>
+  <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+</div>
 </div><!-- END REVOLUTION SLIDER -->
 
 
-                    <section class="slice border-top">
-                        <div class="container">
-                            <div class="section-title section-title--style-1 text-center">
-                                <h3 class="section-title-inner heading-6 strong-600 text-uppercase ls-2">
-                                    <span>Produits populaires</span>
-                                </h3>
-                                <span class="section-title-delimiter clearfix d-none"></span>
-                            </div>
-
-                            <div class="row-wrapper">
-                                <div class="row cols-xs-space cols-sm-space cols-md-space">
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="block product bg-transparent no-radius">
-                                            <div class="product-image">
-                                                <div class="view view-first">
-                                                    <a href="#">
-                                                        <img src="<%= image_path 'cat/adorable-animal-animal-photography-171227.jpg' %>">
-                                                    </a>
-                                                </div>
-
-                                                <div class="product-actions--a product-actions--2" data-animation-in="slideInRight"  data-animation-out="slideOutRight">
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-bag"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-ios-heart-outline"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-body px-0">
-                                                <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Chaton bleu</h3>
-                                                <span class="star-rating star-rating-sm">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span>
-                                                <div class="price-wrapper">
-                                                    <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">80.00</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="block product bg-transparent no-radius">
-                                            <div class="product-image">
-                                                <div class="view view-first">
-                                                    <a href="#">
-                                                         <img src="<%= image_path 'cat/adorable-animal-animal-photography-774731.jpg' %>">
-                                                    </a>
-                                                </div>
-
-                                                <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-bag"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-ios-heart-outline"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-body px-0">
-                                                <h3 class="heading heading-6 strong-500 text-capitalize mb-0">La chasse</h3>
-                                                <span class="star-rating star-rating-sm">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span>
-                                                <div class="price-wrapper">
-                                                    <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">500.00</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="block product bg-transparent no-radius">
-                                            <div class="product-image">
-                                                <div class="view view-first">
-                                                    <a href="#">
-                                                         <img src="<%= image_path 'cat/adorable-animal-bed-596590.jpg' %>">
-                                                    </a>
-                                                </div>
-
-                                                <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-bag"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-ios-heart-outline"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-body px-0">
-                                                <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Le réveil</h3>
-                                                <span class="star-rating star-rating-sm">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span>
-                                                <div class="price-wrapper">
-                                                    <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">100.00</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="block product bg-transparent no-radius">
-                                            <div class="product-image">
-                                                <div class="view view-first">
-                                                    <a href="#">
-                                                        <img src="<%= image_path 'cat/adorable-animal-cat-127028.jpg' %>">
-                                                    </a>
-                                                </div>
-
-                                                <div class="product-actions--a product-actions--2" data-animation-in="slideInRight"  data-animation-out="slideOutRight">
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-bag"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-ios-heart-outline"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-body px-0">
-                                                <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Minicrotte</h3>
-                                                <span class="star-rating star-rating-sm">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span>
-                                                <div class="price-wrapper">
-                                                    <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">60.00</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row cols-xs-space cols-sm-space cols-md-space">
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="block product bg-transparent no-radius">
-                                            <div class="product-image">
-                                                <div class="view view-first">
-                                                    <a href="#">
-                                                       <img src="<%= image_path 'cat/adorable-animal-cat-358464.jpg' %>">
-                                                    </a>
-                                                </div>
-
-                                                <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-bag"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-ios-heart-outline"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-body px-0">
-                                                <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Gandalf le blanc</h3>
-                                                <span class="star-rating star-rating-sm">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span>
-                                                <div class="price-wrapper">
-                                                    <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">50.00</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="block product bg-transparent no-radius">
-                                            <div class="product-image">
-                                                <div class="view view-first">
-                                                    <a href="#">
-                                                        <img src="<%= image_path 'cat/adorable-animal-cat-730896.jpg' %>">
-                                                    </a>
-                                                </div>
-
-                                                <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-bag"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-ios-heart-outline"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-body px-0">
-                                                <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Gandalf le gris</h3>
-                                                <span class="star-rating star-rating-sm">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span>
-                                                <div class="price-wrapper">
-                                                    <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">110.00</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="block product bg-transparent no-radius">
-                                            <div class="product-image">
-                                                <div class="view view-first">
-                                                    <a href="#">
-                                                        <img src="<%= image_path 'cat/animal-animal-photography-blur-55750' %>">
-                                                    </a>
-                                                </div>
-
-                                                <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-bag"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-ios-heart-outline"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-body px-0">
-                                                <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Intimidation</h3>
-                                                <span class="star-rating star-rating-sm">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span>
-                                                <div class="price-wrapper">
-                                                    <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">100.00</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="block product bg-transparent no-radius">
-                                            <div class="product-image">
-                                                <div class="view view-first">
-                                                    <a href="#">
-                                                        <img src="<%= image_path 'cat/animal-animal-photography-blur-399647.jpg' %>">
-                                                    </a>
-                                                </div>
-
-                                                <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-bag"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn-product-action">
-                                                        <i class="ion-ios-heart-outline"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-body px-0">
-                                                <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Intimidé</h3>
-                                                <span class="star-rating star-rating-sm">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span>
-                                                <div class="price-wrapper">
-                                                    <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">30.00</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="slice-sm sct-color-1 border-top border-bottom">
-                        <div class="container">
-                            <div class="row cols-xs-space cols-sm-space cols-md-space">
-                                <div class="col-lg-4 b-lg-right">
-                                    <div class="px-3 py-3 text-lg-center">
-                                        <h3 class="heading heading-6 strong-500">Livraison gratuite en 48/72H</h3>
-                                        <p class="c-gray-light line-height-1_6">
-                                            Optez pour nous options de livraisons rapides (gratuit à partir de 250€ d'achat).
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 b-lg-right">
-                                    <div class="px-3 py-3 text-lg-center">
-                                        <h3 class="heading heading-6 strong-500">Retour gratuit</h3>
-                                        <p class="c-gray-light line-height-1_6">
-                                            Satisfaits ou remboursés* Nous nous engageons à reprendre vos produits s'ils n'ont pas été utilisés.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="px-3 py-3 text-lg-center">
-                                        <h3 class="heading heading-6 strong-500">Paiement securisé</h3>
-                                        <ul class="inline-links mt-2">
-                                            <li>
-                                                <img src="<%= image_path 'icons/cards/visa.png' %>">
-                                            </li>
-                                            <li>
-                                                <img src="<%= image_path 'icons/cards/mastercard.png' %>">
-                                            </li>
-                                            <li>
-                                                 <img src="<%= image_path 'icons/cards/maestro.png' %>">
-                                            </li>
-                                            <li>
-                                                <img src="<%= image_path 'icons/cards/paypal.png' %>">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="slice sct-color-1">
-                        <div class="container">
-                            <div class="section-title section-title--style-1 text-center">
-                                <h3 class="section-title-inner heading-6 strong-600 text-uppercase ls-2">
-
-
-
-                                    <span>Les nouveautés</span>
-
-                                </h3>
-                                <span class="section-title-delimiter clearfix d-none"></span>
-                            </div>
-
-                            <div class="row cols-xs-space cols-sm-space cols-md-space card-flip-container">
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="card-flip" data-flip-trigger="hover">
-                                        <div class="card-front">
-                                            <div class="card-image">
-                                                <img src="<%= image_path 'cat/animal-black-and-white-cat-21297.jpg' %>">
-                                            </div>
-                                        </div>
-
-                                        <div class="card-back">
-                                            <div class="card-body card-body--overlay d-flex">
-                                                <div class="card-body-inner">
-                                                    <small class="c-gray-light">Oct 30, 2017</small>
-                                                    <h4 class="heading heading-6 strong-500 mt-2 mb-4">Chat regardant son avenir</h4>
-                                                    <p class="text-sm c-gray-light line-height-1_6">
-                                                        Cette photo a été prise par le célèbre artiste Choukalesko. Elle prend place dans un décor moskovite...
-                                                    </p>
-                                                    <a href="#" class="link link-sm link--style-2">Lire plus</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="card-flip" data-flip-trigger="hover">
-                                        <div class="card-front">
-                                            <div class="card-image">
-                                                <img src="<%= image_path 'cat/animal-animal-photography-cat-115011.jpg' %>">
-                                            </div>
-                                        </div>
-
-                                        <div class="card-back">
-                                            <div class="card-body card-body--overlay d-flex">
-                                                <div class="card-body-inner">
-                                                    <small class="c-gray-light">Oct 30, 2017</small>
-                                                    <h4 class="heading heading-6 strong-500 mt-2 mb-4">Lucy in the Sky with Diamonds</h4>
-                                                    <p class="text-sm c-gray-light line-height-1_6">
-                                                        Parabole de la célèbre chanson des Beatles dont les initiales donnent la substance ingérée par ce chat...
-                                                    </p>
-                                                    <a href="#" class="link link-sm link--style-2">Lire plus</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="card-flip" data-flip-trigger="hover">
-                                        <div class="card-front">
-                                            <div class="card-image">
-                                                <img src="<%= image_path 'cat/animal-animal-photography-blur-736530.jpg' %>">
-                                            </div>
-                                        </div>
-
-                                        <div class="card-back">
-                                            <div class="card-body card-body--overlay d-flex">
-                                                <div class="card-body-inner">
-                                                    <small class="c-gray-light">Oct 30, 2017</small>
-                                                    <h4 class="heading heading-6 strong-500 mt-2 mb-4">Portrait latéral</h4>
-                                                    <p class="text-sm c-gray-light line-height-1_6">
-                                                        Enormément critiquée lors de sa sortie tant elle dénonce, cette photo reste néanmoins mythique et une belle image de notre conscience...
-                                                    </p>
-                                                    <a href="#" class="link link-sm link--style-2">Lire plus</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="card-flip" data-flip-trigger="hover">
-                                        <div class="card-front">
-                                            <div class="card-image">
-                                               <img src="<%= image_path 'cat/animal-animal-photography-blur-399647.jpg' %>">
-                                            </div>
-                                        </div>
-
-                                        <div class="card-back">
-                                            <div class="card-body card-body--overlay d-flex">
-                                                <div class="card-body-inner">
-                                                    <small class="c-gray-light">Oct 30, 2017</small>
-                                                    <h4 class="heading heading-6 strong-500 mt-2 mb-4">Albert Einstein</h4>
-                                                    <p class="text-sm c-gray-light line-height-1_6">
-                                                        Réincarnation du célèbre chercheur depuis quelques années, il ne cessera de nous faire rire avec ses grimaces tant connues...
-                                                    </p>
-                                                    <a href="#" class="link link-sm link--style-2">Lire plus</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- FOOTER -->
-                    <footer id="footer" class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row cols-xs-space cols-sm-space cols-md-space">
-                <div class="col-lg-5">
-                    <div class="col">
-                        <img src=<%= image_path 'logo/logo-1-c.png' %>>
-                        <span class="clearfix"></span>
-                        <span class="heading heading-sm c-gray-light strong-400">Un animal. Des milliers d'affiches.</span>
-                        <p class="mt-3">
-                            Tous les chats présentés dans notre magasin ont donné leur consentement. Aucune maltraitance envers les félins bien-sûr ! Les chats vaincront.
-                        </p>
-
-                        <div class="copyright mt-4">
-                            <p>
-                                Copyright &copy; 2018                                <a href="https://webpixels.io" target="_blank">
-                                    <strong>Webpixels</strong>
-
-
-                                </a>
-                               Tous droits réservés
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2">
-                    <div class="col">
-                       <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
-                           Support
-                       </h4>
-
-                       <ul class="footer-links">
-
-
-                            <li><a href="#" title="Contact support">Contact</a></li>
-                            <li><a href="#" title="Jobs">FAQ</a></li>
-                        </ul>
-                     </div>
-                </div>
-
-                <div class="col-lg-2">
-                    <div class="col">
-                        <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
-                            L'entreprise
-                        </h4>
-
-                        <ul class="footer-links">
-                             <li>
-                                 <a href="#" title="Home">
-
-
-                                     Accueil
-
-                                 </a>
-                             </li>
-                             <li>
-                                 <a href="#" title="About us">
-                                     A propos
-
-                                 </a>
-                             </li>
-                             <li>
-                                 <a href="#" title="Services">
-                                     Services
-                                 </a>
-                             </li>
-                             <li>
-                                 <a href="#" title="Contact">
-                                     Contact
-
-                                 </a>
- 
-                             </li>
-                         </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="col">
-                        <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
-
-                            Restons connectés
-
-                        </h4>
-
-                        <ul class="social-media social-media--style-1-v4">
-                            <li>
-                                <a href="#" class="facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Github">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="slice border-top">
+  <div class="container">
+    <div class="section-title section-title--style-1 text-center">
+      <h3 class="section-title-inner heading-6 strong-600 text-uppercase ls-2">
+        <span>Produits populaires</span>
+      </h3>
+      <span class="section-title-delimiter clearfix d-none"></span>
     </div>
-</footer>
-                </div>
+
+    <div class="row-wrapper">
+      <div class="row cols-xs-space cols-sm-space cols-md-space">
+        <div class="col-lg-3 col-md-6">
+          <div class="block product bg-transparent no-radius">
+            <div class="product-image">
+              <div class="view view-first">
+                <a href="#">
+                  <img src="<%= image_path 'cat/adorable-animal-animal-photography-171227.jpg' %>">
+                </a>
+              </div>
+
+              <div class="product-actions--a product-actions--2" data-animation-in="slideInRight"  data-animation-out="slideOutRight">
+                <button type="button" class="btn-product-action">
+                  <i class="ion-bag"></i>
+                </button>
+
+                <button type="button" class="btn-product-action">
+                  <i class="ion-ios-heart-outline"></i>
+                </button>
+              </div>
             </div>
-        </div><!-- END: st-pusher -->
-    </div><!-- END: st-container -->
+
+            <div class="block-body px-0">
+              <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Chaton bleu</h3>
+              <span class="star-rating star-rating-sm">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+              </span>
+              <div class="price-wrapper">
+                <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">80.00</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="block product bg-transparent no-radius">
+            <div class="product-image">
+              <div class="view view-first">
+                <a href="#">
+                 <img src="<%= image_path 'cat/adorable-animal-animal-photography-774731.jpg' %>">
+               </a>
+             </div>
+
+             <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
+              <button type="button" class="btn-product-action">
+                <i class="ion-bag"></i>
+              </button>
+
+              <button type="button" class="btn-product-action">
+                <i class="ion-ios-heart-outline"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="block-body px-0">
+            <h3 class="heading heading-6 strong-500 text-capitalize mb-0">La chasse</h3>
+            <span class="star-rating star-rating-sm">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </span>
+            <div class="price-wrapper">
+              <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">500.00</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="block product bg-transparent no-radius">
+          <div class="product-image">
+            <div class="view view-first">
+              <a href="#">
+               <img src="<%= image_path 'cat/adorable-animal-bed-596590.jpg' %>">
+             </a>
+           </div>
+
+           <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
+            <button type="button" class="btn-product-action">
+              <i class="ion-bag"></i>
+            </button>
+
+            <button type="button" class="btn-product-action">
+              <i class="ion-ios-heart-outline"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="block-body px-0">
+          <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Le réveil</h3>
+          <span class="star-rating star-rating-sm">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+          </span>
+          <div class="price-wrapper">
+            <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">100.00</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+      <div class="block product bg-transparent no-radius">
+        <div class="product-image">
+          <div class="view view-first">
+            <a href="#">
+              <img src="<%= image_path 'cat/adorable-animal-cat-127028.jpg' %>">
+            </a>
+          </div>
+
+          <div class="product-actions--a product-actions--2" data-animation-in="slideInRight"  data-animation-out="slideOutRight">
+            <button type="button" class="btn-product-action">
+              <i class="ion-bag"></i>
+            </button>
+
+            <button type="button" class="btn-product-action">
+              <i class="ion-ios-heart-outline"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="block-body px-0">
+          <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Minicrotte</h3>
+          <span class="star-rating star-rating-sm">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+          </span>
+          <div class="price-wrapper">
+            <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">60.00</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row cols-xs-space cols-sm-space cols-md-space">
+    <div class="col-lg-3 col-md-6">
+      <div class="block product bg-transparent no-radius">
+        <div class="product-image">
+          <div class="view view-first">
+            <a href="#">
+             <img src="<%= image_path 'cat/adorable-animal-cat-358464.jpg' %>">
+           </a>
+         </div>
+
+         <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
+          <button type="button" class="btn-product-action">
+            <i class="ion-bag"></i>
+          </button>
+
+          <button type="button" class="btn-product-action">
+            <i class="ion-ios-heart-outline"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="block-body px-0">
+        <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Gandalf le blanc</h3>
+        <span class="star-rating star-rating-sm">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+        </span>
+        <div class="price-wrapper">
+          <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">50.00</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="block product bg-transparent no-radius">
+      <div class="product-image">
+        <div class="view view-first">
+          <a href="#">
+            <img src="<%= image_path 'cat/adorable-animal-cat-730896.jpg' %>">
+          </a>
+        </div>
+
+        <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
+          <button type="button" class="btn-product-action">
+            <i class="ion-bag"></i>
+          </button>
+
+          <button type="button" class="btn-product-action">
+            <i class="ion-ios-heart-outline"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="block-body px-0">
+        <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Gandalf le gris</h3>
+        <span class="star-rating star-rating-sm">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+        </span>
+        <div class="price-wrapper">
+          <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">110.00</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="block product bg-transparent no-radius">
+      <div class="product-image">
+        <div class="view view-first">
+          <a href="#">
+            <img src="<%= image_path 'cat/animal-animal-photography-blur-55750' %>">
+          </a>
+        </div>
+
+        <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
+          <button type="button" class="btn-product-action">
+            <i class="ion-bag"></i>
+          </button>
+
+          <button type="button" class="btn-product-action">
+            <i class="ion-ios-heart-outline"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="block-body px-0">
+        <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Intimidation</h3>
+        <span class="star-rating star-rating-sm">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+        </span>
+        <div class="price-wrapper">
+          <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">100.00</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="block product bg-transparent no-radius">
+      <div class="product-image">
+        <div class="view view-first">
+          <a href="#">
+            <img src="<%= image_path 'cat/animal-animal-photography-blur-399647.jpg' %>">
+          </a>
+        </div>
+
+        <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
+          <button type="button" class="btn-product-action">
+            <i class="ion-bag"></i>
+          </button>
+
+          <button type="button" class="btn-product-action">
+            <i class="ion-ios-heart-outline"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="block-body px-0">
+        <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Intimidé</h3>
+        <span class="star-rating star-rating-sm">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+        </span>
+        <div class="price-wrapper">
+          <span class="price heading-6 c-gray-light strong-400">$<span class="price-value">30.00</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="slice-sm sct-color-1 border-top border-bottom">
+  <div class="container">
+    <div class="row cols-xs-space cols-sm-space cols-md-space">
+      <div class="col-lg-4 b-lg-right">
+        <div class="px-3 py-3 text-lg-center">
+          <h3 class="heading heading-6 strong-500">Livraison gratuite en 48/72H</h3>
+          <p class="c-gray-light line-height-1_6">
+            Optez pour nous options de livraisons rapides (gratuit à partir de 250€ d'achat).
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 b-lg-right">
+        <div class="px-3 py-3 text-lg-center">
+          <h3 class="heading heading-6 strong-500">Retour gratuit</h3>
+          <p class="c-gray-light line-height-1_6">
+            Satisfaits ou remboursés* Nous nous engageons à reprendre vos produits s'ils n'ont pas été utilisés.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="px-3 py-3 text-lg-center">
+          <h3 class="heading heading-6 strong-500">Paiement securisé</h3>
+          <ul class="inline-links mt-2">
+            <li>
+              <img src="<%= image_path 'icons/cards/visa.png' %>">
+            </li>
+            <li>
+              <img src="<%= image_path 'icons/cards/mastercard.png' %>">
+            </li>
+            <li>
+             <img src="<%= image_path 'icons/cards/maestro.png' %>">
+           </li>
+           <li>
+            <img src="<%= image_path 'icons/cards/paypal.png' %>">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slice sct-color-1">
+  <div class="container">
+    <div class="section-title section-title--style-1 text-center">
+      <h3 class="section-title-inner heading-6 strong-600 text-uppercase ls-2">
+
+
+
+        <span>Les nouveautés</span>
+
+      </h3>
+      <span class="section-title-delimiter clearfix d-none"></span>
+    </div>
+
+    <div class="row cols-xs-space cols-sm-space cols-md-space card-flip-container">
+      <div class="col-lg-3 col-md-6">
+        <div class="card-flip" data-flip-trigger="hover">
+          <div class="card-front">
+            <div class="card-image">
+              <img src="<%= image_path 'cat/animal-black-and-white-cat-21297.jpg' %>">
+            </div>
+          </div>
+
+          <div class="card-back">
+            <div class="card-body card-body--overlay d-flex">
+              <div class="card-body-inner">
+                <small class="c-gray-light">Oct 30, 2017</small>
+                <h4 class="heading heading-6 strong-500 mt-2 mb-4">Chat regardant son avenir</h4>
+                <p class="text-sm c-gray-light line-height-1_6">
+                  Cette photo a été prise par le célèbre artiste Choukalesko. Elle prend place dans un décor moskovite...
+                </p>
+                <a href="#" class="link link-sm link--style-2">Lire plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card-flip" data-flip-trigger="hover">
+          <div class="card-front">
+            <div class="card-image">
+              <img src="<%= image_path 'cat/animal-animal-photography-cat-115011.jpg' %>">
+            </div>
+          </div>
+
+          <div class="card-back">
+            <div class="card-body card-body--overlay d-flex">
+              <div class="card-body-inner">
+                <small class="c-gray-light">Oct 30, 2017</small>
+                <h4 class="heading heading-6 strong-500 mt-2 mb-4">Lucy in the Sky with Diamonds</h4>
+                <p class="text-sm c-gray-light line-height-1_6">
+                  Parabole de la célèbre chanson des Beatles dont les initiales donnent la substance ingérée par ce chat...
+                </p>
+                <a href="#" class="link link-sm link--style-2">Lire plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card-flip" data-flip-trigger="hover">
+          <div class="card-front">
+            <div class="card-image">
+              <img src="<%= image_path 'cat/animal-animal-photography-blur-736530.jpg' %>">
+            </div>
+          </div>
+
+          <div class="card-back">
+            <div class="card-body card-body--overlay d-flex">
+              <div class="card-body-inner">
+                <small class="c-gray-light">Oct 30, 2017</small>
+                <h4 class="heading heading-6 strong-500 mt-2 mb-4">Portrait latéral</h4>
+                <p class="text-sm c-gray-light line-height-1_6">
+                  Enormément critiquée lors de sa sortie tant elle dénonce, cette photo reste néanmoins mythique et une belle image de notre conscience...
+                </p>
+                <a href="#" class="link link-sm link--style-2">Lire plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card-flip" data-flip-trigger="hover">
+          <div class="card-front">
+            <div class="card-image">
+             <img src="<%= image_path 'cat/animal-animal-photography-blur-399647.jpg' %>">
+           </div>
+         </div>
+
+         <div class="card-back">
+          <div class="card-body card-body--overlay d-flex">
+            <div class="card-body-inner">
+              <small class="c-gray-light">Oct 30, 2017</small>
+              <h4 class="heading heading-6 strong-500 mt-2 mb-4">Albert Einstein</h4>
+              <p class="text-sm c-gray-light line-height-1_6">
+                Réincarnation du célèbre chercheur depuis quelques années, il ne cessera de nous faire rire avec ses grimaces tant connues...
+              </p>
+              <a href="#" class="link link-sm link--style-2">Lire plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row cols-xs-space cols-sm-space cols-md-space">
+        <div class="col-lg-5">
+          <div class="col">
+            <img src=<%= image_path 'logo/logo-1-c.png' %>>
+            <span class="clearfix"></span>
+            <span class="heading heading-sm c-gray-light strong-400">Un animal. Des milliers d'affiches.</span>
+            <p class="mt-3">
+              Tous les chats présentés dans notre magasin ont donné leur consentement. Aucune maltraitance envers les félins bien-sûr ! Les chats vaincront.
+            </p>
+
+            <div class="copyright mt-4">
+              <p>
+                Copyright &copy; 2018                                <a href="https://webpixels.io" target="_blank">
+                  <strong>Webpixels</strong>
+
+
+                </a>
+                Tous droits réservés
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2">
+          <div class="col">
+           <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
+             Support
+           </h4>
+
+           <ul class="footer-links">
+
+
+            <li><a href="#" title="Contact support">Contact</a></li>
+            <li><a href="#" title="Jobs">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="col">
+          <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
+            L'entreprise
+          </h4>
+
+          <ul class="footer-links">
+           <li>
+             <a href="#" title="Home">
+
+
+               Accueil
+
+             </a>
+           </li>
+           <li>
+             <a href="#" title="About us">
+               A propos
+
+             </a>
+           </li>
+           <li>
+             <a href="#" title="Services">
+               Services
+             </a>
+           </li>
+           <li>
+             <a href="#" title="Contact">
+               Contact
+
+             </a>
+
+           </li>
+         </ul>
+       </div>
+     </div>
+
+     <div class="col-lg-3">
+      <div class="col">
+        <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
+
+          Restons connectés
+
+        </h4>
+
+        <ul class="social-media social-media--style-1-v4">
+          <li>
+            <a href="#" class="facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
+              <i class="fa fa-dribbble"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Github">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div><!-- END: st-pusher -->
+</div><!-- END: st-container -->
 </div><!-- END: body-wrap -->
 
 <!-- SCRIPTS -->
