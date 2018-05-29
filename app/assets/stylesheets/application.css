@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+.sct-color-1{
+	background: #2C3A47;
+	font-family: white;
+
+}
+.border-top{
+	font-family: white;
+}
+p{
+	color: black;
+	font-size: 20px;
+}
