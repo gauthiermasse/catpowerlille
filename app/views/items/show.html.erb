@@ -5,7 +5,7 @@
         <!-- Product gallery -->
         <div class="gallery-container">
           <div id="slideshow" class="gallery-top no-padding bg-transparent">
-            <img src="<%= image_path 'cat/adorable-animal-animal-photography-774731.jpg' %>" alt="Bird">
+            <img src="<%= @item.url %>" alt="Bird">
           </div>
         </div>
       </div>
@@ -16,7 +16,7 @@
           <div class="product-description-wrapper">
             <!-- Product title -->
             <h2 class="product-title heading heading-3 strong-400 text-capitalize">
-             Votre panier
+             <%= @item.title %>
             </h2>
 
             <hr>
@@ -27,17 +27,17 @@
                 Description:
               </h3>
               <p>
-                Pellentesque habitant morbi tristique senectus et netus malesuada fames turpis egestas. Vestibulum tortor quam feugiat vitae ultricies eget tempor.
+                <%= @item.description %>
               </p>
             </div>
 
             <!-- Price tag -->
-            <div class="product-price py-3">$<strong>160</strong><small>.00</small></div>
+            <div class="product-price py-3"><strong><%= @item.price %></strong>€</div>
             <!-- Add to cart button -->
-              <button type="button" class="btn btn-styled btn-lg btn-block btn-base-1 btn-cart mt-2">
-              Ajouter au panier
-              </button>
-          </div>
+              <button  type="button" class="btn btn-styled btn-lg btn-block btn-base-1 btn-cart mt-2">
+              <%= link_to 'ajouter au panier', panier_path %>
+                  </button>
+                  <%= link_to 'ajouter au panier', add_path(@item.id) %>
 
         </div>
       </div>
