@@ -30,3 +30,11 @@
  *= require navigation.css
  *= require bootstrap.min.css
  */
+.sct-color-1{
+	background: #2C3A47;
+	
+}
+p{
+	color: black;
+	font-size: 20px;
+}
