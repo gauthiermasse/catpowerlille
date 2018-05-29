@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   get 'home/contact'
   get 'home/panier', to: 'home#panier'
   get 'users/show'
-
 end
