@@ -27,42 +27,7 @@ tpj(document).ready(function() {
                     swipe_direction: "horizontal",
                     drag_block_vertical: false
                 },
-                arrows: {
-                    style: "zeus",
-                    enable: true,
-                    hide_onmobile: true,
-                    hide_under: 600,
-                    hide_onleave: true,
-                    hide_delay: 200,
-                    hide_delay_mobile: 1200,
-                    tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
-                    left: {
-                        h_align: "left",
-                        v_align: "center",
-                        h_offset: 30,
-                        v_offset: 0
-                    },
-                    right: {
-                        h_align: "right",
-                        v_align: "center",
-                        h_offset: 30,
-                        v_offset: 0
-                    }
-                },
-                bullets: {
-                    enable: true,
-                    hide_onmobile: true,
-                    hide_under: 800,
-                    style: "zeus",
-                    hide_onleave: false,
-                    direction: "horizontal",
-                    h_align: "center",
-                    v_align: "bottom",
-                    h_offset: 0,
-                    v_offset: 30,
-                    space: 5,
-                    tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title">{{title}}</span>'
-                }
+                
             },
             responsiveLevels: [1240, 1024, 778, 480],
             visibilityLevels: [1240, 1024, 778, 480],
