@@ -1,4 +1,5 @@
 require 'dotenv'
+require 'fog/aws'
 Dotenv.load
 
 CarrierWave.configure do |config|
