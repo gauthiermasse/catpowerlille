@@ -37,6 +37,7 @@ def add
    @item = Item.find(params[:id])
    current_user.cart.items << @item
  end
+ redirect_to shop_path
 end
 
 def remove
