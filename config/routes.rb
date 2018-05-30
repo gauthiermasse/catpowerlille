@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  
-  resources :items
   devise_for :users
+  resources :items
   root 'home#index'
   get 'home/shop', to: 'home#shop', as: 'shop'
   get 'home/contact'
