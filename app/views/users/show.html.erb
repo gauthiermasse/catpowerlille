@@ -13,11 +13,14 @@
  							</div>
  							<!-- Profile details -->
  							<div class="profile-details">
- 								<h2 class="heading heading-4 strong-500 profile-name">Elisabeth Alanna</h2>
- 								<h3 class="heading heading-6 strong-400 profile-occupation mt-3">Email</h3>
+ 								<h2 class="heading heading-4 strong-500 profile-name"><%= current_user.fullname%></h2>
+ 								<h3 class="heading heading-6 strong-400 profile-occupation mt-3">Email: <%= current_user.email %></h3>
  							</div>
  							<div class="profile-connect mt-4">
- 								<a href="#" class="btn btn-styled btn-block btn-rounded btn-base-1">Mon panier</a>
+ 								<li class="btn btn-styled btn-block btn-rounded btn-base-2">
+                          			<%= link_to "Mon panier", panier_path, class: 'nav-link' %>
+                        		</li>
+ 								
  							</div>
  						</div>
  					</div>
