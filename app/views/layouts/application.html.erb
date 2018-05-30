@@ -112,10 +112,14 @@
                                   <% end %>
                                 </div>
                               </div>
-
+                               <div class="py-4">
+                                <% if user_signed_in? %>
+                                <%= link_to "Mon profil", users_show_path, class:"btn btn-styled  btn-base-1" %>
+                                <% end %>
+                                </div>
                               <div class="py-4">
                                 <% if user_signed_in? %>
-                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class:"btn btn-styled  btn-base-2" %>
                                 <% else %>
                                 <%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"form-default") do |f| %>
                                   <div class="form-group">
