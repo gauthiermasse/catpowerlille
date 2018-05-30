@@ -1,0 +1,11 @@
+<h1>Merci pour votre achat <%= @client.email %>!</h1>
+<p>Voici vos achats:</p>
+<ol>
+	<% @commande.items.each do |i| %>
+		<li>image <%= i.url %></li>
+		<li><%= i.title %></li>
+		<li><%= i.description %></li>
+		<li><%= i.price %></li>
+	<% end %>
+</ol>
+

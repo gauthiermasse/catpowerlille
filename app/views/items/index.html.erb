@@ -8,7 +8,7 @@
       <th>Title</th>
       <th>Description</th>
       <th>Price</th>
-      <th>Url</th>
+      <th>Image name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         <td><%= item.title %></td>
         <td><%= item.description %></td>
         <td><%= item.price %></td>
-        <td><%= item.url %></td>
+        <td><%= item.image %></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
