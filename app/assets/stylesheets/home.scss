@@ -5,3 +5,13 @@
 .bg-img {
 	background-image: '<%= image-url("cat/adorable-animal-animal-photography-171227.jpg") %>' !important;
 }
+
+.notice {
+	margin: 0;
+}
+
+.alert {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
