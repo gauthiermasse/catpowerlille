@@ -10,8 +10,13 @@ class HomeController < ApplicationController
   end
 
   def panier
-    
-   	@cart = current_user.cart
+
+    @cart = current_user.cart
+    @sum = 0.0
+    @cart.items.each do |item|
+      @sum += item.price 
+    end
+    puts @sum
   end
 
   def add
@@ -26,5 +31,17 @@ class HomeController < ApplicationController
   end
 
   def pay
+    @sum = 0.0
+    @cart.items.each do |item|
+      @sum += item.price 
+    end
+
+    @cart = current_user.cart
+    @order = Order.new
+    @order.user_id = current_user.id
+    @order.items << current_user.cart.items
+    @cart.destroy
+    @cart = Cart.create(user_id: current_user.id)
+    @order.save
   end
 end
