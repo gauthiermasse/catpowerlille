@@ -100,48 +100,56 @@
                           <li>
                             <div class="dropdown-form-inner">
                               <div class="row align-items-center b-xs-bottom">
-                                <div class="col-7">
+                                <div class="col-12">
+                                  <% if user_signed_in? %>
+                                  <h3 class="heading heading-5 strong-400 text-capitalize pb-2">Deconnexion</h3>
+                                  <% else %>
                                   <h3 class="heading heading-5 strong-400 text-capitalize pb-2">Connexion</h3>
-                                </div>
-                                <div class="col-5">
-                                  <a href="#" class="btn-close-dropdown" data-toggle="dropdown">&times;</a>
+                                  <% end %>
                                 </div>
                               </div>
 
                               <div class="py-4">
-                                <form class="form-default">
+                                <% if user_signed_in? %>
+                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+                                <% else %>
+                                <%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"form-default") do |f| %>
                                   <div class="form-group">
-                                    <input type="email" class="form-control form-control-lg" placeholder="Email">
+                                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control form-control-lg', placeholder: 'Email' %>
                                   </div>
 
                                   <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg" placeholder="Password">
+                                    <%= f.password_field :password, autocomplete: "off", class: 'form-control form-control-lg', placeholder: 'Mot de passe' %>
                                   </div>
 
                                   <div class="form-group mb-0">
                                     <div class=" row align-items-center">
                                       <div class="col-6">
-                                        <div class="checkbox">
-                                          <input type="checkbox" id="chkRememberMe">
-                                          <label for="chkRememberMe" class="no-margin">Se rappeler de moi</label>
+                                        <% if devise_mapping.rememberable? -%>
+                                        <div class="checkbox ml-2">
+                                          <%= f.check_box :remember_me %>
+                                          <%= f.label :remember_me, 'Se rappeler de moi', class:'no-margin' %>
                                         </div>
+                                        <% end %>
                                       </div>
 
                                       <div class="col-6 text-right">
-                                        <button type="submit" class="btn btn-base-1 btn-circle">Connexion</button>
+                                        <%= f.submit "Connexion", class:"btn btn-base-1 btn-circle" %>
+                                      
                                       </div>
                                     </div>
                                   </div>
-                                </form>
+                                <% end %>
+                                <% end %>
                               </div>
                             </div>
                           </li>
-
+                          <% if user_signed_in? %>
+                          <% else %>
                           <li class="text-center py-3 b-xs-top">
-                            <a href="sign-up-1.html">
-                              Créer un nouveau compte
-                            </a>
+                            <%= link_to "Inscription", new_user_registration_path %>
                           </li>
+                          <% end %>
                         </ul>
                       </li>
                       
