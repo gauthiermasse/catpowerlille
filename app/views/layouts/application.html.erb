@@ -106,6 +106,7 @@
                               <div class="row align-items-center b-xs-bottom">
                                 <div class="col-12">
                                   <% if user_signed_in? %>
+                                  <h3 class="heading heading-5 strong-400 pb-2"><%= current_user.fullname %></h3>
                                   <h3 class="heading heading-5 strong-400 pb-2"><%= current_user.email %></h3>
                                   <% else %>
                                   <h3 class="heading heading-5 strong-400 text-capitalize pb-2">connexion</h3>
