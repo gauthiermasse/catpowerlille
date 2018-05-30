@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2018_05_30_134334) do
 
   create_table "carts", force: :cascade do |t|
