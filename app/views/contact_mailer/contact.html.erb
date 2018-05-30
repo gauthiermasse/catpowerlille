@@ -2,10 +2,10 @@
 <p>Voici vos achats:</p>
 <ol>
 	<% @commande.items.each do |i| %>
-		<li>image <%= i.url %></li>
-		<li><%= i.title %></li>
-		<li><%= i.description %></li>
-		<li><%= i.price %></li>
+		<li>image <%= i.url %> <br>
+		<%= i.title %> <br>
+		<%= i.description %> <br>
+		<%= i.price %></li>
 	<% end %>
 </ol>
 
