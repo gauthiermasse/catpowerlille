@@ -42,8 +42,8 @@
                 </div>
               </div>
               <%= f.submit "Se connecter", class:"btn btn-styled btn-lg btn-block btn-base-1 mt-4" %>
-              <small>S'inscire</small><br>
-              <small>Mot de passe oublié ?</small>
+              <small><%= link_to "S'inscrire'", new_registration_path(resource_name) %></small><br>   
+              <small><%= link_to "Mot de passe oublié?", new_password_path(resource_name) %></small>
             <% end %>
             </form>
           </div>
@@ -52,4 +52,3 @@
     </div>
   </div>
 </section>
-<%= render "devise/shared/links" %>

@@ -58,13 +58,11 @@
                 <small class="">En cliquant, vous acceptez les termes et conditions</small>
               </div>
               <%= f.submit "Inscription", class:"btn btn-styled  btn-base-1 mt-4" %>
-
             <% end %>
-            <small>Se connecter</small>
           </div>
+          <small><%= link_to "Se connecter", new_session_path(resource_name) %></small>
         </div>
       </div>
     </div>
   </div>
 </section>
-<%= render "devise/shared/links" %>
