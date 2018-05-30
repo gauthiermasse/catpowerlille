@@ -16,6 +16,12 @@
  </head>
 
   <body>
+  
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
+
     <!-- MAIN WRAPPER -->
     <div class="body-wrap shop-default shop-minimalist">
       <div id="st-container" class="st-container">
@@ -60,20 +66,14 @@
                       <!-- Navbar links -->
                       <ul class="navbar-nav">
                         <li class="nav-item dropdown megamenu">
-                          <a class="nav-link" href="../../index.html">
-                            Les produits
-                          </a>
+                           <%= link_to "Les produits", shop_path, class: 'nav-link' %>
                         </li>
                         <li class="nav-item dropdown megamenu">
-                          <a class="nav-link" href="../../index.html">
-                            Contact
-                          </a>
+                          <%= link_to "Contact", home_contact_path, class: 'nav-link' %>
                         </li>
                         <% if user_signed_in? %>
                         <li class="nav-item dropdown megamenu">
-                          <a class="nav-link" href="../../index.html">
-                            Panier
-                          </a>
+                          <%= link_to "Panier", panier_path, class: 'nav-link' %>
                         </li>
                         <li class="nav-item dropdown megamenu">
                           <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class: 'nav-link' %>
@@ -102,7 +102,7 @@
                               <div class="row align-items-center b-xs-bottom">
                                 <div class="col-12">
                                   <% if user_signed_in? %>
-                                  <h3 class="heading heading-5 strong-400 text-capitalize pb-2">Deconnexion</h3>
+                                  <h3 class="heading heading-5 strong-400 text-capitalize pb-2"><%= current_user.email %></h3>
                                   <% else %>
                                   <h3 class="heading heading-5 strong-400 text-capitalize pb-2">Connexion</h3>
                                   <% end %>
