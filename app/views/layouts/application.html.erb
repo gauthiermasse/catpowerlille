@@ -106,16 +106,20 @@
                               <div class="row align-items-center b-xs-bottom">
                                 <div class="col-12">
                                   <% if user_signed_in? %>
-                                  <h3 class="heading heading-5 strong-400 text-capitalize pb-2"><%= current_user.email %></h3>
+                                  <h3 class="heading heading-5 strong-400 pb-2"><%= current_user.email %></h3>
                                   <% else %>
-                                  <h3 class="heading heading-5 strong-400 text-capitalize pb-2">Connexion</h3>
+                                  <h3 class="heading heading-5 strong-400 text-capitalize pb-2">connexion</h3>
                                   <% end %>
                                 </div>
                               </div>
-
+                               <div class="py-4">
+                                <% if user_signed_in? %>
+                                <%= link_to "Mon profil", users_show_path, class:"btn btn-styled  btn-base-1" %>
+                                <% end %>
+                                </div>
                               <div class="py-4">
                                 <% if user_signed_in? %>
-                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class:"btn btn-styled  btn-base-2" %>
                                 <% else %>
                                 <%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"form-default") do |f| %>
                                   <div class="form-group">
@@ -160,7 +164,7 @@
                       <!-- Cart -->
                       <% if user_signed_in? %>
                       <li class="nav-item nav-item-icon">
-                        <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="<%= panier_path %>">
                           <i class="fa fa-shopping-bag"></i>
                         </a>
                       </li>
