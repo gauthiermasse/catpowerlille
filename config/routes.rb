@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :charges
   resources :items
   devise_for :users
+  resources :items
   root 'home#index'
   get 'home/shop', to: 'home#shop', as: 'shop'
   get 'home/contact'
@@ -9,5 +11,6 @@ Rails.application.routes.draw do
   get 'users/show'
   get 'add:id', to: 'home#add', as: 'add'
   get 'remove:id', to: 'home#remove', as:'remove'
-  get 'pay:id', to: 'home#pay', as: 'pay'
+  get 'pay', to: 'home#pay', as: 'pay'
+  post 'pay', to: 'home#pay'
 end
