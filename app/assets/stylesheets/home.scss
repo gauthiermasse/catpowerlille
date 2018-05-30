@@ -8,10 +8,21 @@
 
 .notice {
 	margin: 0;
+	color: #3FA858;
+
 }
 
 .alert {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	color: #FF2243FF;
+}
+
+.product-image {
+	padding: 0 !important;
+}
+
+a:hover {
+	text-decoration: none;
 }
