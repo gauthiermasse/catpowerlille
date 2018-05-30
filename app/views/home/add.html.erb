@@ -1,5 +1,4 @@
-produit ajouté <%= @item %>
-<%= current_user %>
-<%= current_user.cart %>
+produit ajouté dans votre panier.
 
-<a href="javascript:history.back()">retourner au shopping</a>
+<a href="<%= panier_path %>"> Voir votre panier </a>
+<a href="<%= shop_path %>">retourner au shopping</a>
