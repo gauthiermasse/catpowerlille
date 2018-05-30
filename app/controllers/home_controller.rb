@@ -5,6 +5,7 @@ class HomeController < ApplicationController
    end
  end
 
+
  def shop     
    @items = Item.all
  end
@@ -12,6 +13,7 @@ class HomeController < ApplicationController
  def contact
 
  end
+
 
  def panier
    unless user_signed_in?
@@ -24,6 +26,7 @@ class HomeController < ApplicationController
     @sum += item.price 
   end
 end
+
 
 def add
  unless user_signed_in?
@@ -51,7 +54,6 @@ def remove
 end
 
 def pay
-
  @cart = current_user.cart
  @sum = 0.0
  @cart.items.each do |item|
@@ -71,7 +73,7 @@ charge = Stripe::Charge.create(
   :description => 'Rails Stripe customer',
   :currency    => 'eur'
   )
-
+@user = current_user
 @cart = current_user.cart
 @order = Order.new
 @order.user_id = current_user.id
@@ -79,11 +81,13 @@ charge = Stripe::Charge.create(
 @cart.destroy
 @cart = Cart.create(user_id: current_user.id)
 @order.save
+ContactMailer.contact(current_user, @order).deliver_now
+ContactMailer.admin().deliver_now
 redirect_to panier_path
 
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
-
+  
 end
 end
