@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
     def index
-    end
+   end
 
     def shop
        @items = Item.all
@@ -10,6 +10,7 @@ class HomeController < ApplicationController
     end
 
     def panier
+
 
     @cart = current_user.cart
     @sum = 0.0
@@ -50,7 +51,7 @@ class HomeController < ApplicationController
         :description => 'Rails Stripe customer',
         :currency    => 'eur'
         )
-
+      @user = current_user
       @cart = current_user.cart
       @order = Order.new
       @order.user_id = current_user.id
@@ -58,6 +59,8 @@ class HomeController < ApplicationController
       @cart.destroy
       @cart = Cart.create(user_id: current_user.id)
       @order.save
+      ContactMailer.contact(current_user, @order).deliver_now
+      ContactMailer.admin().deliver_now
       redirect_to panier_path
     
 
