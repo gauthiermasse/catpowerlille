@@ -1,13 +1,10 @@
 require 'dotenv'
-<<<<<<< HEAD
-require 'fog/aws'
-=======
 require 'fog-aws'
 require 'carrierwave/storage/abstract'
 require 'carrierwave/storage/file'
 require 'carrierwave/storage/fog'
 
->>>>>>> 5f1d5ea03261b88fcb680dd3eaeb5f6b50624584
+
 Dotenv.load
 
 CarrierWave.configure do |config|
