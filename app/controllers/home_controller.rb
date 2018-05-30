@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
 
   def shop
+  	puts params
   end
 
   def contact
