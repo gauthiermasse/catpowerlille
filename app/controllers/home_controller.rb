@@ -10,6 +10,7 @@ class HomeController < ApplicationController
   end
 
   def panier
+    
    	@cart = current_user.cart
   end
 
@@ -22,5 +23,8 @@ class HomeController < ApplicationController
   	current_user.cart.items.find(params[:id]).destroy
     flash[:success] = "#a bien été supprimé de votre panier"
     redirect_to panier_path
+  end
+
+  def pay
   end
 end

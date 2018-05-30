@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get 'users/show'
   get 'add:id', to: 'home#add', as: 'add'
   get 'remove:id', to: 'home#remove', as:'remove'
+  get 'pay:id', to: 'home#pay', as: 'pay'
 end
