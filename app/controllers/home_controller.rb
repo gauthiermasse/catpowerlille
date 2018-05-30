@@ -81,8 +81,8 @@ charge = Stripe::Charge.create(
 @cart.destroy
 @cart = Cart.create(user_id: current_user.id)
 @order.save
-ContactMailer.contact(current_user, @order).deliver_now
-ContactMailer.admin().deliver_now
+ContactMailer.contact(current_user, current_user.orders.last).deliver_now
+ContactMailer.admin(current_user).deliver_now
 redirect_to panier_path
 
 

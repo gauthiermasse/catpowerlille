@@ -10,7 +10,8 @@ class ContactMailer < ApplicationMailer
       	)
 	end
 
-	def admin
+	def admin(user)
+		@client = user
 		mail(
       		to: 'thplille@gmail.com',
       		from: 'thplille@gmail.com',
