@@ -1,0 +1,6 @@
+class ChargesController < ApplicationController
+
+	
+
+end
+
