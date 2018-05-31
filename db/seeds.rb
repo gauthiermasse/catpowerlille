@@ -8,12 +8,12 @@
 
 
 require 'faker'
+Item.delete_all
 
-20.times do
-	Item.create(
-		title: Faker::Cat.name,
-		description: Faker::Cat.breed,
-		price: Faker::Number.decimal(2),
-		url: "https://wamiz.com/uploads/images/chatdrolepositioncarre.jpg"
-	)
+for x in 1..50 do
+
+Item.create(title: Faker::Cat.name,description: Faker::Cat.breed,price: Faker::Number.decimal(2),url: "https://s3.eu-west-3.amazonaws.com/rails-chaton/cat#{x}.jpg")
+
+x+=1
 end
+
