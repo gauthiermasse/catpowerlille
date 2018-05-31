@@ -1,13 +1,27 @@
 class HomeController < ApplicationController
   def index
    if user_signed_in? && Cart.find_by_user_id(current_user.id) == nil
-     Cart.create(user_id: current_user.id)
+     cart = Cart.create(user_id: current_user.id)
+     puts Newcart.find_by_session_id(session[:session_id])
+     puts Newcart.find_by_session_id(session[:session_id]).items
+     puts session[:session_id]
+     cart.items << Newcart.find_by_session_id(session[:session_id]).items
+   elsif !user_signed_in? && Newcart.find_by_session_id(session[:session_id]) == nil
+    Newcart.create(session_id: session[:session_id])
+     puts Newcart.find_by_session_id(session[:session_id])
+     puts Newcart.find_by_session_id(session[:session_id]).items
+     puts session[:session_id]
    end
  end
 
 
  def shop     
    @items = Item.all
+   if user_signed_in? && Cart.find_by_user_id(current_user.id) == nil
+     Cart.create(user_id: current_user.id)
+   elsif !user_signed_in? && Newcart.find_by_session_id(session[:session_id]) == nil
+    Newcart.create(session_id: session[:session_id])
+   end
  end
 
  def contact
@@ -17,7 +31,7 @@ class HomeController < ApplicationController
 
  def panier
    unless user_signed_in?
-     @cart = User.first.cart
+     @cart = Newcart.find_by_session_id(session[:session_id])
    else
      @cart = current_user.cart
    end
@@ -30,7 +44,7 @@ end
 
 def add
  unless user_signed_in?
-   @cart = User.first.cart
+   @cart = Newcart.find_by_session_id(session[:session_id])
    @item = Item.find(params[:id])
    @cart.items << @item
  else
@@ -42,7 +56,7 @@ end
 
 def remove
  unless user_signed_in?
-   @cart = User.first.cart
+   @cart = Newcart.find_by_session_id(session[:session_id])
    @cart.items.delete(Item.find(params[:id]))
    flash[:success] = "a bien été supprimé de votre panier"
    redirect_to panier_path
