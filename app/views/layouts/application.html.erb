@@ -113,15 +113,17 @@
                                   <% end %>
                                 </div>
                               </div>
+                              <% if user_signed_in? %>
                                <div class="py-4">
-                                <% if user_signed_in? %>
-                                <%= link_to "Mon profil", users_show_path, class:"btn btn-styled  btn-base-1" %>
-                                <% end %>
+                                <%= link_to "Mon profil", users_show_path, class:"btn btn-styled btn-lg btn-block btn-base-1" %>
+                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class:"btn btn-styled btn-lg btn-block btn-base-2" %>
                                 </div>
+                                <% end %>
+                               <% if user_signed_in? %>
+                               <% else %>
                               <div class="py-4">
-                                <% if user_signed_in? %>
-                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class:"btn btn-styled  btn-base-2" %>
-                                <% else %>
+                               
+                                
                                 <%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"form-default") do |f| %>
                                   <div class="form-group">
                                     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control form-control-lg', placeholder: 'Email' %>
@@ -149,8 +151,9 @@
                                     </div>
                                   </div>
                                 <% end %>
-                                <% end %>
+                                
                               </div>
+                              <% end %>
                             </div>
                           </li>
                           <% if user_signed_in? %>
