@@ -43,12 +43,11 @@ end
 def remove
  unless user_signed_in?
    @cart = User.first.cart
-   @cart.items.destroy(Item.find(params[:id]))
+   @cart.items.delete(Item.find(params[:id]))
    flash[:success] = "a bien été supprimé de votre panier"
    redirect_to panier_path
  else
-
-   @cart.items.destroy(Item.find(params[:id]))
+   current_user.cart.items.delete(Item.find(params[:id]))
    flash[:success] = "a bien été supprimé de votre panier"
    redirect_to panier_path
  end
