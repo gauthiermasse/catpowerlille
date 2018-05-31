@@ -21,19 +21,16 @@
                             </div>
 
                             <div class="product-actions--a product-actions--2" data-animation-in="slideInRight"  data-animation-out="slideOutRight">
+                                <a href="<%= item_path(item.id) %>">
                                 <button type="button" class="btn-product-action">
-                                    <i class="ion-bag"></i>
-                                </button>
-
-                                <button type="button" class="btn-product-action">
-                                    <i class="ion-ios-heart-outline"></i>
+                                 <i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
                                 </button>
                             </div>
                         </div>
 
                         <div class="block-body px-0">
                             <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= item.title %></h3>
-                            
+
                             <div class="price-wrapper">
                                 <span class="price heading-6 c-gray-light strong-400"><span class="price-value"><%= item.price %></span>€</span>
                             </div>

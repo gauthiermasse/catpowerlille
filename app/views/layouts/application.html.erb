@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
  </head>
 
   <body>
@@ -113,13 +113,14 @@
                                   <% end %>
                                 </div>
                               </div>
-                              <% if user_signed_in? %>
-                                <%= link_to "Mon profil", users_show_path, class:'btn btn-styled btn-lg btn-block btn-base-1' %> 
-                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class:"btn btn-styled btn-lg btn-block btn-base-2" %>
-                              <% end %>
+                               <div class="py-4">
+                                <% if user_signed_in? %>
+                                <%= link_to "Mon profil", users_show_path, class:"btn btn-styled  btn-base-1" %>
+                                <% end %>
+                                </div>
                               <div class="py-4">
                                 <% if user_signed_in? %>
-                                
+                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class:"btn btn-styled  btn-base-2" %>
                                 <% else %>
                                 <%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"form-default") do |f| %>
                                   <div class="form-group">
