@@ -51,6 +51,7 @@ def add
    @item = Item.find(params[:id])
    current_user.cart.items << @item
  end
+ flash[:success] = "l'article a bien été ajouter à votre panier"
  redirect_to shop_path
 end
 
@@ -58,11 +59,11 @@ def remove
  unless user_signed_in?
    @cart = Newcart.find_by_session_id(session[:session_id])
    @cart.items.delete(Item.find(params[:id]))
-   flash[:success] = "a bien été supprimé de votre panier"
+   flash[:success] = "l'article a bien été supprimé de votre panier"
    redirect_to panier_path
  else
    current_user.cart.items.delete(Item.find(params[:id]))
-   flash[:success] = "a bien été supprimé de votre panier"
+   flash[:success] = "l'article a bien été supprimé de votre panier"
    redirect_to panier_path
  end
 end
