@@ -105,4 +105,8 @@ class HomeController < ApplicationController
         flash[:error] = e.message
         
       end
+
+      def orders
+        @orders = Order.all
+      end
 end
