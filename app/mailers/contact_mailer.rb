@@ -19,7 +19,16 @@ class ContactMailer < ApplicationMailer
       	)
 	end
 
-	def sendus
-		
+	def sendus(data,mail,user)
+		p 'contact mailer'
+		p data
+		p mail
+		p user
+		@body=data
+		mail(
+      		to: 'thplille@gmail.com',
+      		from: 'thplille@gmail.com',
+      		subject: user
+      	)
 	end
 end

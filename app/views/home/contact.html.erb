@@ -253,7 +253,7 @@
      <div class="row justify-content-center">
         <div class="col-lg-6">
             <!-- Contact form -->
-            <%= form_tag("/", method: "get") do %>
+            <%= form_tag("/contact", method: "get") do %>
             <form id="form_contact" data-action="../../php/send-email.php" class="form-default" role="form">
                 <div class="form-group has-feedback">
                     <%= text_field_tag 'nom', nil, placeholder: "Entrez votre nom ", class: 'form-control form-control-lg' %>
@@ -268,7 +268,7 @@
                 </div>
 
                 <div class="form-group has-feedback">
-                    <%= text_area_tag 'Description', nil, placeholder: "Message... ", class: 'form-control form-control-lg' %>
+                    <%= text_area_tag 'description', nil, placeholder: "Message... ", class: 'form-control form-control-lg' %>
                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     <div class="help-block with-errors"></div>
                 </div>
