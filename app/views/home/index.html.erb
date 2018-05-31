@@ -157,246 +157,36 @@
       </h3>
       <span class="section-title-delimiter clearfix d-none"></span>
     </div>
-
+     
     <div class="row-wrapper">
       <div class="row cols-xs-space cols-sm-space cols-md-space">
+        <% Item.ids.sample(8).each do |iid| %>
         <div class="col-lg-3 col-md-6">
           <div class="block product bg-transparent no-radius">
             <div class="product-image">
               <div class="view view-first">
-                <a href="/items/5">
-                  <img src="<%= image_path 'cat/adorable-animal-animal-photography-171227.jpg' %>">
+                <a href="<%= item_path(iid) %>">
+                  <img src="<%= Item.find(iid).url %>">
                 </a>
               </div>
 
               <div class="product-actions--a product-actions--2" data-animation-in="slideInRight"  data-animation-out="slideOutRight">
                 <button type="button" class="btn-product-action">
-                  <i class="ion-bag"></i>
-                </button>
-
-                <button type="button" class="btn-product-action">
-                  <i class="ion-ios-heart-outline"></i>
+                  <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                 </button>
               </div>
             </div>
 
             <div class="block-body px-0">
-              <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(44).title %></h3>
+              <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(iid).title %></h3>
              
               <div class="price-wrapper">
-                <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(44).price %></span></span>
+                <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(iid).price %></</span></span>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="block product bg-transparent no-radius">
-            <div class="product-image">
-              <div class="view view-first">
-                <a href="/items/6">
-                 <img src="<%= image_path 'cat/adorable-animal-animal-photography-774731.jpg' %>">
-               </a>
-             </div>
-
-             <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-              <button type="button" class="btn-product-action">
-                <i class="ion-bag"></i>
-              </button>
-
-              <button type="button" class="btn-product-action">
-                <i class="ion-ios-heart-outline"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="block-body px-0">
-            <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(44).title %></h3>
-            
-            <div class="price-wrapper">
-              <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(44).price %></span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <div class="block product bg-transparent no-radius">
-          <div class="product-image">
-            <div class="view view-first">
-              <a href="/items/7">
-               <img src="<%= image_path 'cat/adorable-animal-bed-596590.jpg' %>">
-             </a>
-           </div>
-
-           <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-            <button type="button" class="btn-product-action">
-              <i class="ion-bag"></i>
-            </button>
-
-            <button type="button" class="btn-product-action">
-              <i class="ion-ios-heart-outline"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="block-body px-0">
-          <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(44).title %></h3>
-          
-          <div class="price-wrapper">
-            <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(44).price %></span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-6">
-      <div class="block product bg-transparent no-radius">
-        <div class="product-image">
-          <div class="view view-first">
-            <a href="/items/8">
-              <img src="<%= image_path 'cat/adorable-animal-cat-127028.jpg' %>">
-            </a>
-          </div>
-
-          <div class="product-actions--a product-actions--2" data-animation-in="slideInRight"  data-animation-out="slideOutRight">
-            <button type="button" class="btn-product-action">
-              <i class="ion-bag"></i>
-            </button>
-
-            <button type="button" class="btn-product-action">
-              <i class="ion-ios-heart-outline"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="block-body px-0">
-          <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(44).title %></h3>
-         
-          <div class="price-wrapper">
-            <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(44).price %></span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row cols-xs-space cols-sm-space cols-md-space">
-    <div class="col-lg-3 col-md-6">
-      <div class="block product bg-transparent no-radius">
-        <div class="product-image">
-          <div class="view view-first">
-            <a href="/items/9">
-             <img src="<%= image_path 'cat/adorable-animal-cat-358464.jpg' %>">
-           </a>
-         </div>
-
-         <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-          <button type="button" class="btn-product-action">
-            <i class="ion-bag"></i>
-          </button>
-
-          <button type="button" class="btn-product-action">
-            <i class="ion-ios-heart-outline"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="block-body px-0">
-        <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(44).title %></h3>
-       
-        <div class="price-wrapper">
-          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(44).price %></span></span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="block product bg-transparent no-radius">
-      <div class="product-image">
-        <div class="view view-first">
-          <a href="/items/10">
-            <img src="<%= image_path 'cat/adorable-animal-cat-730896.jpg' %>">
-          </a>
-        </div>
-
-        <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-          <button type="button" class="btn-product-action">
-            <i class="ion-bag"></i>
-          </button>
-
-          <button type="button" class="btn-product-action">
-            <i class="ion-ios-heart-outline"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="block-body px-0">
-        <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(44).title %></h3>
-        <div class="price-wrapper">
-          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(44).price %></span></span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="block product bg-transparent no-radius">
-      <div class="product-image">
-        <div class="view view-first">
-          <a href="/items/11">
-            <img src="<%= image_path 'cat/animal3.jpg' %>">
-          </a>
-        </div>
-
-        <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-          <button type="button" class="btn-product-action">
-            <i class="ion-bag"></i>
-          </button>
-
-          <button type="button" class="btn-product-action">
-            <i class="ion-ios-heart-outline"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="block-body px-0">
-        <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(44).title %></h3>
-        
-        <div class="price-wrapper">
-          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(44).price %></span></span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="block product bg-transparent no-radius">
-      <div class="product-image">
-        <div class="view view-first">
-          <a href="/items/12">
-            <img src="<%= image_path 'cat/animal-animal-photography-blur-399647.jpg' %>">
-          </a>
-        </div>
-
-        <div class="product-actions--a product-actions--2" data-animation-in="slideInRight" data-animation-out="slideOutRight">
-          <button type="button" class="btn-product-action">
-            <i class="ion-bag"></i>
-          </button>
-
-          <button type="button" class="btn-product-action">
-            <i class="ion-ios-heart-outline"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="block-body px-0">
-        <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(44).title %></h3>
-        
-        <div class="price-wrapper">
-          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(44).price %></span></span>
-        </div>
+        <% end %>        
       </div>
     </div>
   </div>

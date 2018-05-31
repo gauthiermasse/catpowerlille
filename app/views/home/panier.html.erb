@@ -73,8 +73,8 @@
                 <tbody>
                   <% @cart.items.each do |item| %>
                   <tr class="cart-item">
-                    <td class="product-image">
-                      <img src="<%= image_path 'cat/adorable-animal-animal-photography-774731.jpg' %>" style='width:80px'>
+                    <td class="product-image d-flex justify-content-center">
+                      <img src="<%= image_path 'cat/adorable-animal-animal-photography-774731.jpg' %>" style='width:80px;margin: 3px 0'>
                     </td>
 
                     <td class="product-name">
@@ -102,7 +102,7 @@
           <div class="row align-items-center pt-5">
             <div class="col-6">
               <a href="<%= shop_path %>" class="link link--style-3">
-                <i class="ion-android-arrow-back"></i>
+                <i class="fa fa-angle-left"></i>
                 Return to shop
               </a>
             </div>
