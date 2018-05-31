@@ -18,4 +18,8 @@ class ContactMailer < ApplicationMailer
       		subject: 'test'
       	)
 	end
+
+	def sendus
+		
+	end
 end

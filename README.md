@@ -1,4 +1,17 @@
-Hello, bienvenue pour corriger le magnifique projet de la team THP Lille!
+<h1>The Hacking Chaton-project </h1>
+<h2>1. site d'Ecommerce</br>
+@Kalejo<br>
+@Ampuero Pierre<br>
+@Guillaume<br>
+@Gauthier<br>
+@Louis-Elie<br>
+
+
+thplille@gmail.com
+</h2>
+
+
+
 
 Voici le lien de notre app en production: 
 https://chaton-project.herokuapp.com/
@@ -26,3 +39,4 @@ Accessible depuis l'icône en haut à droite, tu peux modifier tes informations 
 
 	Admin
 Pour voir les commandes des clients en tant qu'admin, logge toi avec les identifiants admin (thplille@gmail.com // mdp: thplille59) et tu peux alors aller sur https://chaton-project.herokuapp.com/orders qui référence toutes les commandes passées, et sur https://chaton-project.herokuapp.com/items pour ajouter / modifier / supprimer des items.
+

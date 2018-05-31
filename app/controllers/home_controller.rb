@@ -22,8 +22,8 @@ class HomeController < ApplicationController
 
       def contact
         puts params
-        p params[:nom   ]
-         puts params[:description]
+        p params[:nom]
+        p params[:description]
       end
 
 
