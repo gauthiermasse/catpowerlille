@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get 'remove:id', to: 'home#remove', as:'remove'
   get 'pay', to: 'home#pay', as: 'pay'
   post 'pay', to: 'home#pay'
+  get 'orders', to: 'home#orders'
 end

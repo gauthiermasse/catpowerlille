@@ -1,0 +1,30 @@
+<% if !user_signed_in? %>
+	<h1> Commencez par vous connecter! </h1>
+
+<% elsif current_user.email != "thplille@gmail.com" %>
+
+	<h1> Vous n'êtes pas admin.
+	</h1>
+
+
+
+<% else %>
+	<h1>Voici les commandes qui ont été passées: </h1>
+		<ol>
+				<% @orders.each do |order| %>
+				<li><%= User.find(order.user_id).email %> a acheté: 
+					<% order.items.each do |item| %>
+						<%= item.title %> - 
+						<% end %>
+		pour un montant de 
+					<% order.items.each do |item| %>
+						<% @sum = 0 %>
+						<% @sum += item.price %>
+						<% end %>
+						<%= @sum %> €.
+				</li>
+				<% end %>
+		</ol>
+	
+
+<% end %>

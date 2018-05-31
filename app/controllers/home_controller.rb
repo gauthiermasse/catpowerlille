@@ -10,6 +10,10 @@ class HomeController < ApplicationController
      end
    end
 
+   def orders
+   @orders = Order.all
+   @sum = 0
+   end
 
  def shop     
    @items = Item.all
