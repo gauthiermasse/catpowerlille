@@ -39,3 +39,4 @@ Accessible depuis l'icône en haut à droite, tu peux modifier tes informations 
 
 	Admin
 Pour voir les commandes des clients en tant qu'admin, logge toi avec les identifiants admin (thplille@gmail.com // mdp: thplille59) et tu peux alors aller sur https://chaton-project.herokuapp.com/orders qui référence toutes les commandes passées, et sur https://chaton-project.herokuapp.com/items pour ajouter / modifier / supprimer des items.
+

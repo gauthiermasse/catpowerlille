@@ -253,29 +253,32 @@
      <div class="row justify-content-center">
         <div class="col-lg-6">
             <!-- Contact form -->
+            <%= form_tag("/", method: "get") do %>
             <form id="form_contact" data-action="../../php/send-email.php" class="form-default" role="form">
                 <div class="form-group has-feedback">
-                    <input type="text" name="name" class="form-control form-control-xl" placeholder="Votre nom" required>
+                    <%= text_field_tag 'nom', nil, placeholder: "Entrez votre nom ", class: 'form-control form-control-lg' %>
                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group has-feedback">
-                    <input type="email" name="email" class="form-control form-control-xl" placeholder="nom@exemple.com" required>
+                  <%= email_field_tag 'email', nil, placeholder: "Adresse e-email ", class: 'form-control form-control-lg' %>
                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group has-feedback">
-                    <textarea name="message" class="form-control no-resize" rows="5" placeholder="Message ..." required></textarea>
+                    <%= text_area_tag 'Description', nil, placeholder: "Message... ", class: 'form-control form-control-lg' %>
                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="">
                     <button type="reset" class="btn-reset d-none"></button>
-                    <button type="submit" class="btn btn-block btn-styled btn-lg btn-base-1 btn-shadow strong-600 mt-4">Envoyer</button>
+                   <%= submit_tag "Envoyer", class:"btn btn-styled btn-lg btn-block btn-base-1 mt-4" %>
+
                 </div>
+                <% end %>
             </form>
         </div>
     </div>
