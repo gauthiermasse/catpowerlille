@@ -1,18 +1,14 @@
 class HomeController < ApplicationController
-  def index
-   if user_signed_in? && Cart.find_by_user_id(current_user.id) == nil
-     cart = Cart.create(user_id: current_user.id)
-     puts Newcart.find_by_session_id(session[:session_id])
-     puts Newcart.find_by_session_id(session[:session_id]).items
-     puts session[:session_id]
-     cart.items << Newcart.find_by_session_id(session[:session_id]).items
-   elsif !user_signed_in? && Newcart.find_by_session_id(session[:session_id]) == nil
-    Newcart.create(session_id: session[:session_id])
-     puts Newcart.find_by_session_id(session[:session_id])
-     puts Newcart.find_by_session_id(session[:session_id]).items
-     puts session[:session_id]
+    def index
+      @array = []
+      if !user_signed_in? && Newcart.find_by_session_id(session[:session_id]) == nil
+      Newcart.create(session_id: session[:session_id])
+     $var_session_id = session[:session_id]
+    elsif user_signed_in? && Cart.find_by_user_id(current_user.id) == nil
+       cart = Cart.create(user_id: current_user.id)
+       cart.items << Newcart.find_by_session_id($var_session_id).items
+     end
    end
- end
 
 
  def shop     
