@@ -1,3 +1,8 @@
+<% if flash[:success] %>
+<div class="container">
+    <div class="alert-success"><%= flash[:success] %></div>
+</div>
+<% end %>
 <section class="slice sct-color-1" id="sct_products">
     <div class="container">
         <div class="section-title section-title--style-1 text-center mb-10">
@@ -21,10 +26,11 @@
                             </div>
 
                             <div class="product-actions--a product-actions--2" data-animation-in="slideInRight"  data-animation-out="slideOutRight">
-                                <a href="<%= item_path(item.id) %>">
-                                <button type="button" class="btn-product-action">
-                                 <i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-                                </button>
+                                <a href="<%= add_path(item.id) %>">
+                                    <button type="button" class="btn-product-action">
+                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    </button>
+                                </a>
                             </div>
                         </div>
 

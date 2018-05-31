@@ -1,3 +1,8 @@
+<% if flash[:success] %>
+<div class="container">
+    <div class="alert-success"><%= flash[:success] %></div>
+</div>
+<% end %>
 <section class="slice-xl page-title border-bottom has-bg-cover bg-size-cover" style="background-image: url(<%= asset_path 'cat/bg-panier.jpg' %>);">
   <div class="container mask-container">
     <div class="row">
@@ -102,7 +107,7 @@
             <div class="col-6">
               <a href="<%= shop_path %>" class="link link--style-3">
                 <i class="fa fa-angle-left"></i>
-                Return to shop
+                Voir les produits
               </a>
             </div>
             <div class="col-6 text-right">
