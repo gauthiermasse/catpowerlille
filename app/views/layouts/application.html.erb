@@ -116,7 +116,6 @@
                               <% if user_signed_in? %>
                                <div class="py-4">
                                 <%= link_to "Mon profil", users_show_path, class:"btn btn-styled btn-lg btn-block btn-base-1" %>
-                                <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class:"btn btn-styled btn-lg btn-block btn-base-2" %>
                                 </div>
                                 <% end %>
                                <% if user_signed_in? %>
@@ -185,6 +184,7 @@
 
          
     <%= yield %>
+    <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class: 'nav-link' %>
     <!-- FOOTER -->
     <footer id="footer" class="footer">
       <div class="footer-top">

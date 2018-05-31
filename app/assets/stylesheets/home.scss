@@ -31,6 +31,10 @@ a:hover {
 .btn-base-6 {
 	color: #FFF;
 	background-color: #23B7B2;
+	&:hover {
+		color: #FFF;
+		background-color: #46A59F;
+	}
 }
 .product-actions--2{
 	width: 40px !important ;
