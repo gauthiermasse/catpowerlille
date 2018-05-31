@@ -17,3 +17,6 @@ Item.create(title: Faker::Cat.name,description: Faker::Cat.breed,price: Faker::N
 x+=1
 end
 
+User.create(fullname: 'test test', email: 'test@test.test')
+Cart.create(user_id: 1)
+
