@@ -14,7 +14,8 @@
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Panier"
-          data-amount="<%= @sum %>"
+          data-amount="<%= @sum * 100 %>"
+          data-currency="EUR"
           data-locale="auto"></script>
 <% end %>
 
