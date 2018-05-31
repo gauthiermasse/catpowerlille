@@ -6,7 +6,7 @@ class ContactMailer < ApplicationMailer
 		mail(
       		to: user.email,
       		from: 'thplille@gmail.com',
-      		subject: 'test'
+      		subject: 'votre commande'
       	)
 	end
 
@@ -15,7 +15,7 @@ class ContactMailer < ApplicationMailer
 		mail(
       		to: 'thplille@gmail.com',
       		from: 'thplille@gmail.com',
-      		subject: 'test'
+      		subject: 'commande'
       	)
 	end
 
