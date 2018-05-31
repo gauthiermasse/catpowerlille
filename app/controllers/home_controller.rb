@@ -21,9 +21,17 @@ class HomeController < ApplicationController
       end
 
       def contact
-        puts params
+        puts 'home controller'
         p params[:nom]
+        p params[:email]
         p params[:description]
+        data = params[:body]
+        mail = params[:email]
+        user = params[:name]
+        p data
+        p mail
+        p user
+        ContactMailer.sendus(data,mail,user).deliver_now
       end
 
 
