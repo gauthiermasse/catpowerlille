@@ -164,7 +164,7 @@
           <div class="block product bg-transparent no-radius">
             <div class="product-image">
               <div class="view view-first">
-                <a href="#">
+                <a href="/items/5">
                   <img src="<%= image_path 'cat/adorable-animal-animal-photography-171227.jpg' %>">
                 </a>
               </div>
@@ -181,10 +181,10 @@
             </div>
 
             <div class="block-body px-0">
-              <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Chaton bleu</h3>
+              <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(5).title %></h3>
              
               <div class="price-wrapper">
-                <span class="price heading-6 c-gray-light strong-400">€<span class="price-value">80.00</span></span>
+                <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(5).price %></span></span>
               </div>
             </div>
           </div>
@@ -194,7 +194,7 @@
           <div class="block product bg-transparent no-radius">
             <div class="product-image">
               <div class="view view-first">
-                <a href="#">
+                <a href="/items/6">
                  <img src="<%= image_path 'cat/adorable-animal-animal-photography-774731.jpg' %>">
                </a>
              </div>
@@ -211,10 +211,10 @@
           </div>
 
           <div class="block-body px-0">
-            <h3 class="heading heading-6 strong-500 text-capitalize mb-0">La chasse</h3>
+            <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(6).title %></h3>
             
             <div class="price-wrapper">
-              <span class="price heading-6 c-gray-light strong-400">€<span class="price-value">500.00</span></span>
+              <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(6).price %></span></span>
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@
         <div class="block product bg-transparent no-radius">
           <div class="product-image">
             <div class="view view-first">
-              <a href="#">
+              <a href="/items/7">
                <img src="<%= image_path 'cat/adorable-animal-bed-596590.jpg' %>">
              </a>
            </div>
@@ -241,10 +241,10 @@
         </div>
 
         <div class="block-body px-0">
-          <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Le réveil</h3>
+          <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(7).title %></h3>
           
           <div class="price-wrapper">
-            <span class="price heading-6 c-gray-light strong-400">€<span class="price-value">100.00</span></span>
+            <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(7).price %></span></span>
           </div>
         </div>
       </div>
@@ -254,7 +254,7 @@
       <div class="block product bg-transparent no-radius">
         <div class="product-image">
           <div class="view view-first">
-            <a href="#">
+            <a href="/items/8">
               <img src="<%= image_path 'cat/adorable-animal-cat-127028.jpg' %>">
             </a>
           </div>
@@ -271,10 +271,10 @@
         </div>
 
         <div class="block-body px-0">
-          <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Minicrotte</h3>
+          <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(8).title %></h3>
          
           <div class="price-wrapper">
-            <span class="price heading-6 c-gray-light strong-400">€<span class="price-value">60.00</span></span>
+            <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(8).price %></span></span>
           </div>
         </div>
       </div>
@@ -286,7 +286,7 @@
       <div class="block product bg-transparent no-radius">
         <div class="product-image">
           <div class="view view-first">
-            <a href="#">
+            <a href="/items/9">
              <img src="<%= image_path 'cat/adorable-animal-cat-358464.jpg' %>">
            </a>
          </div>
@@ -303,10 +303,10 @@
       </div>
 
       <div class="block-body px-0">
-        <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Gandalf le blanc</h3>
+        <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(9).title %></h3>
        
         <div class="price-wrapper">
-          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value">50.00</span></span>
+          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(9).price %></span></span>
         </div>
       </div>
     </div>
@@ -316,7 +316,7 @@
     <div class="block product bg-transparent no-radius">
       <div class="product-image">
         <div class="view view-first">
-          <a href="#">
+          <a href="/items/10">
             <img src="<%= image_path 'cat/adorable-animal-cat-730896.jpg' %>">
           </a>
         </div>
@@ -333,10 +333,9 @@
       </div>
 
       <div class="block-body px-0">
-        <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Gandalf le gris</h3>
-        
+        <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(10).title %></h3>
         <div class="price-wrapper">
-          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value">110.00</span></span>
+          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(10).price %></span></span>
         </div>
       </div>
     </div>
@@ -346,7 +345,7 @@
     <div class="block product bg-transparent no-radius">
       <div class="product-image">
         <div class="view view-first">
-          <a href="#">
+          <a href="/items/11">
             <img src="<%= image_path 'cat/animal3.jpg' %>">
           </a>
         </div>
@@ -363,10 +362,10 @@
       </div>
 
       <div class="block-body px-0">
-        <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Intimidation</h3>
+        <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(11).title %></h3>
         
         <div class="price-wrapper">
-          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value">100.00</span></span>
+          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(11).price %></span></span>
         </div>
       </div>
     </div>
@@ -376,7 +375,7 @@
     <div class="block product bg-transparent no-radius">
       <div class="product-image">
         <div class="view view-first">
-          <a href="#">
+          <a href="/items/12">
             <img src="<%= image_path 'cat/animal-animal-photography-blur-399647.jpg' %>">
           </a>
         </div>
@@ -393,10 +392,10 @@
       </div>
 
       <div class="block-body px-0">
-        <h3 class="heading heading-6 strong-500 text-capitalize mb-0">Intimidé</h3>
+        <h3 class="heading heading-6 strong-500 text-capitalize mb-0"><%= Item.find(12).title %></h3>
         
         <div class="price-wrapper">
-          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value">30.00</span></span>
+          <span class="price heading-6 c-gray-light strong-400">€<span class="price-value"><%= Item.find(12).price %></span></span>
         </div>
       </div>
     </div>
