@@ -74,7 +74,7 @@
                   <% @cart.items.each do |item| %>
                   <tr class="cart-item">
                     <td class="product-image d-flex justify-content-center">
-                      <img src="<%= image_path 'cat/adorable-animal-animal-photography-774731.jpg' %>" style='width:80px;margin: 3px 0'>
+                      <img src="<%= item.url %>" style='width:80px;margin: 3px 0'>
                     </td>
 
                     <td class="product-name">
@@ -89,7 +89,7 @@
                     </td>
                     <td class="product-remove">
                       <a href="<%= remove_path(item.id) %>" class="text-right pl-4">
-                          <i class="fa fa-trash-alt"></i>
+                          <i class="fa fa-trash"></i>
                       </a>
                     </td>
                   </tr>
