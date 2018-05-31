@@ -1,12 +1,9 @@
 class UsersController < ApplicationController
   def show
-  	#@user = User.find(params[:id])
-  	#@email = user.email
-	 #@user = User.all
+  	p 'voila'
+  	@orders = Order.find_by_user_id(current_user.id)
+  	p @orders
+  	@price = 0
   end
- def showid
-  	#@user = User.find(params[:id])
-
-  end
-
+ 
 end
