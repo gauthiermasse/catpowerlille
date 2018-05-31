@@ -96,6 +96,7 @@ class HomeController < ApplicationController
     @order.save
     ContactMailer.contact(current_user, current_user.orders.last).deliver_now
     ContactMailer.admin(current_user).deliver_now
+    flash[:success] = "votre commande a bien été pris en compte, vous recevrez vos photos dans les plus brefs délais."
     redirect_to panier_path
 
 
