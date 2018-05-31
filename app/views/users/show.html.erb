@@ -1,4 +1,4 @@
- <body class="slice-sm sct-color-1 blue">
+ <section class="slice-sm sct-color-1">
  	<div class="profile">
  		<div class="container">
  			<div class="row cols-xs-space cols-sm-space cols-md-space">
@@ -36,6 +36,7 @@
 
  							</div>
  						</div>
+ 						
  						<div class="card no-border">
  							<div>
  								<table class="table table-sm table-hover">
@@ -48,27 +49,31 @@
  											<th>Prix</th>
  										</tr>
  									</thead>
-
+									<% if @orders != nil %>
  									<tbody>
  										<tr>
  											<td>
  											</td>
  											<td>
- 												<a href="#">WPX-1500</a>
+ 												<a href="#"> Commande n° <%= @orders.id %></a>
  											</td>
- 											<td>06/08/2018</td>
+ 											<td><%= @orders.created_at.iso8601 %> </td>
  											<td>
- 												25.00 EUR
+ 												<% @orders.items.each do |item| %>
+ 												<% @price += item.price %>
+ 												<% end %>
+ 												<%= @price %> 
  											</td>
  										</tr>
  									</tbody>
+ 									<% end %>
  								</table>
  							</div>
  						</div>
-
+						
  					</div>
  				</div>
  			</div>
  		</div>
  	</div>
- </body>
+ </section>
