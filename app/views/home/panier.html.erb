@@ -1,28 +1,28 @@
 <section class="slice-xl page-title border-bottom has-bg-cover bg-size-cover" style="background-image: url(<%= asset_path 'cat/bg-panier.jpg' %>);">
-    <div class="container mask-container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="">
-                    <h3 class="heading heading-1 strong-600 text-capitalize mb-1">
-                        <span>Mon panier</span>
-                    </h3>
+  <div class="container mask-container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="">
+          <h3 class="heading heading-1 strong-600 text-capitalize mb-1">
+            <span>Mon panier</span>
+          </h3>
 
-                    <ol class="breadcrumb breadcrumb--style-2">
-                        <li class="breadcrumb-item"><a href="<%= root_path %>">Accueil</a></li>
-                        <li class="breadcrumb-item"><a href="<%= shop_path %>">Voir le magasin</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:history.back()">Retour</a></li>
-                    </ol>
-                </div>
-
-                <!-- Fluid text paragraph -->
-                <div class="pb-4 mt-4">
-                    <p class="lead">
-                        Parce qu'un chat peut égayer votre vie
-                    </p>
-                </div>
-            </div>
+          <ol class="breadcrumb breadcrumb--style-2">
+            <li class="breadcrumb-item"><a href="<%= root_path %>">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="<%= shop_path %>">Voir le magasin</a></li>
+            <li class="breadcrumb-item"><a href="javascript:history.back()">Retour</a></li>
+          </ol>
         </div>
+
+        <!-- Fluid text paragraph -->
+        <div class="pb-4 mt-4">
+          <p class="lead">
+            Parce qu'un chat peut égayer votre vie
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 
@@ -31,25 +31,25 @@
 
 <% if @cart.items.empty? %> 
 <section class="slice-xl sct-color-1">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="text-center">
-                    <div class="d-block font-size-3 font-size-md-6 c-gray-light">
-                        <i class="fa fa-shopping-cart"></i>
-                    </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="text-center">
+          <div class="d-block font-size-3 font-size-md-6 c-gray-light">
+            <i class="fa fa-shopping-cart"></i>
+          </div>
 
-                    <h2 class="heading heading-3 strong-600">Votre panier est vide.</h2>
-                    <p class="mt-4 px-5">
-                        Votre panier est pour l'instant vide. Retournez vers notre magasin pour profiter des derniéres photos que nous avons selectionnés pour vous.
-                    </p>
-                    <a href="<%= shop_path %>" class="btn btn-styled btn-base-1 mt-5">
-                        Retourner dans la galerie
-                    </a>
-                </div>
-            </div>
+          <h2 class="heading heading-3 strong-600">Votre panier est vide.</h2>
+          <p class="mt-4 px-5">
+            Votre panier est pour l'instant vide. Retournez vers notre magasin pour profiter des derniéres photos que nous avons selectionnés pour vous.
+          </p>
+          <a href="<%= shop_path %>" class="btn btn-styled btn-base-1 mt-5">
+            Retourner dans la galerie
+          </a>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <% else %>
@@ -57,7 +57,6 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-12 mt--150">
-        <form class="form-default" data-toggle="validator" role="form">
           <div class="card">
             <div class="card-body">
               <table class="table-cart">
@@ -89,7 +88,7 @@
                     </td>
                     <td class="product-remove">
                       <a href="<%= remove_path(item.id) %>" class="text-right pl-4">
-                          <i class="fa fa-trash"></i>
+                        <i class="fa fa-trash"></i>
                       </a>
                     </td>
                   </tr>
@@ -110,12 +109,28 @@
               <% unless user_signed_in? %>
               <a href="/users/sign_up" class="btn btn-styled btn-base-1">Connectez-vous pour commander</a>
               <% else %>
-              <h6 class="text-uppercase">Total : <strong class="ml-3"><%= (@sum).round(2) %> €</strong></h6>
-              <%= link_to "Passer au paiement", pay_path ,class: 'btn btn-styled btn-base-1' %>
+              <%= form_tag pay_path do %>
+              <article>
+                <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+                <% end %>
+                <label class="amount">
+                  <span>Montant: <%= @sum.round(2) %> €</span>
+                </label>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="Panier"
+              data-amount="<%= @sum * 100 %>"
+              data-currency="EUR"
+              data-locale="auto"></script>
+              <% end %>
               <% end %>
             </div>
           </div>
-        </form>
       </div>
     </div>
   </div>

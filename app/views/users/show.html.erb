@@ -18,7 +18,7 @@
  							</div>
  							<div class="profile-connect mt-4">
                           		<%= link_to "Mon panier", panier_path, class:'btn btn-styled btn-lg btn-block btn-base-1' %>
-                          		<%= link_to "Modifier mon profil", panier_path, class:'btn btn-styled btn-lg btn-block btn-base-6' %>
+                          		<%= link_to "Modifier mon profil", edit_user_registration_path, class:'btn btn-styled btn-lg btn-block btn-base-6' %>
  							</div>
  						</div>
  					</div>
@@ -62,7 +62,7 @@
  												<% @orders.items.each do |item| %>
  												<% @price += item.price %>
  												<% end %>
- 												<%= @price %> 
+ 												<%= @price.round(2) %> 
  											</td>
  										</tr>
  									</tbody>
